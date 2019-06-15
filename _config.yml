@@ -1,0 +1,13 @@
+title: Progject NeGYa
+url: "/"
+baseurl: ""
+
+personal_link: ""
+email: deerrider@outlook.com
+
+markdown: kramdown
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+
+# plugins:
