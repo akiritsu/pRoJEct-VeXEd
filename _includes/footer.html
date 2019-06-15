@@ -1,0 +1,19 @@
+<footer>
+    <nav>
+        <ul>
+            <li class="copyright">© 2019</li>
+            {% if site.email %}
+                <li>
+                    <i class="fa fa-envelope" href="{{site.email}}"></i>
+                </li>
+            {% endif %}
+            {% if site.statement %}
+                <li>
+                    <h6>
+                        {{site.statement}}
+                    </h6>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</footer>

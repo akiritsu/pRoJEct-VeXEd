@@ -1,0 +1,19 @@
+<header>
+    <nav>
+        <ul>
+            <li class="left">
+                {% if page.title %}
+                    {{page.title}}
+                {% else %}
+                    {{site.title}}
+                {% endif %}
+            </li>
+            {% if page.multilang != "single" %}
+                <li class="right">
+                    <i class="fa fa-language"></i>
+                </li>
+            {% endif %}
+            <!-- add other buttons here -->
+        </ul>
+    </nav>
+</header>
