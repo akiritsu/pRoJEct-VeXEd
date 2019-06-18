@@ -3,7 +3,48 @@ layout: default
 lang: ["ch", "en", "dcs", "den"]
 ---
 
-Den wa Stad Schuebersonndeg, op all d'Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an. Hären Noper rem no, rei Dach rëscht vu. Schiet gehéiert Margréitchen gei mä, si wou gutt lait d'Wise, dén spilt virun vu. All as alle eraus, hie weisen Poufank Blieder am. D'Vullen Nuechtegall wéi ze, sin gutt Schied Dauschen de, um gutt Hémecht der.
+# Header One
+## Header Two
+### Header Three
+#### Header Four
+##### Header Five
+###### Header Six
+
+**bold**, *italic*, ~~strikethrough~~, `keyword`, [link](www.google.com)
+
+> blockquote
+>
+>Den wa Stad Schuebersonndeg, op all d'Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an. 
+
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
+```
+
+1. ordered list item 1
+2. ordered list item 2
+   1. sublist
+      1. subsublist
+* unordered list       
+* unordered sublist
+  * subsublist
+    * subsubsublist
+      * subsubsubsublist
+        * subsubsubsubsublist
+
+| table    | head two  | ?    |
+| :------- | :-------- | :--- |
+| fark     | Ya        | nice |
+| bark     | duck      | nice |
+| surprise | maza faka | lol  |
+| lslsls   | kkk       | a    |
+
+horizontal line:
+
+***
+
 
 Wand fest wa gét. D'Welt weisen Fréijor ze ech. Da d'Land Faarwen nei, dé fir rëscht blëtzen. Un fir hirem schaddreg, Hunn Well Scholl en wär, nët Dall hirem nozegon et. Dee frou zielen ké, gei dé sinn d'Beem schnéiwäiss, all no Mamm Schied Faarwen. Feld d'Vioule Hämmelsbrot och op, eraus d'Wise zwëschen hie op.
 

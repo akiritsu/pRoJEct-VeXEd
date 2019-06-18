@@ -1,8 +1,10 @@
-title: pRoJEkt-NeGYa
+title: pRoJEct-NeGYa
 url: "akiritsu.github.io/"
-# baseurl: "pRoJEkt-NeGYa"
+# baseurl: "pRoJEct-NeGYa"
 description: ""
-email: deerrider@outlook.com
+email: "deerrider@outlook.com"
+github: "akiritsu"
+access_token: true
 statement: "本网站归个人所有，所有信息都他吗我的"
 
 markdown: kramdown

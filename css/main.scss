@@ -1,7 +1,183 @@
 ---
 Jekyll Assets: start scss files with two lines of triple dashes
 ---
-@charset  "utf-8";
-/* import partitials from css/ */
-@import "global";
-@import "page";
+
+@charset "utf-8";
+// import partitials
+
+// global reset
+$color-primary: rgba(14, 172, 14, 0.918);
+$color-warning: rgb(173, 0, 0);
+$color-secondary: rgb(237, 237, 241);
+$color-line: rgb(237, 237, 241);
+$color-back: rgb(149, 155, 158);
+$color-page: rgb(14, 8, 20);
+$image-background: none;
+@font-face {
+  font-family: "Fira Code";
+  src: url("../fonts/FiraCode-Retina.ttf");
+}
+$font-family: "Fira Code", "Source-Han-Sans-Medium", Helvetica, Tahoma, Arial,
+  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
+  "WenQuanYi Micro Hei", sans-serif;
+$font-size-h1: 32px;
+$font-size-h2: 25px;
+$font-size-h3: 24px;
+$font-size-h4: 21px;
+$font-size-h5: 20px;
+$font-size-h6: 14px;
+$font-size-primary: 19px;
+body {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  line-height: 1.35;
+  background-color: $color-back;
+  background-image: $image-background;
+  font-size: $font-size-primary;
+  color: $color-primary;
+  font-family: $font-family;
+}
+.container {
+  align-items: center;
+  overflow: auto;
+  top: 7%;
+  margin: 0 auto;
+  height: 86%;
+  width: 78%;
+  max-width: 1140px;
+  position: relative;
+  border: 1px solid $color-primary;
+  background-color: $color-page;
+  a {
+      color: $color-primary;
+  }
+  .header {
+    text-align: center;
+    height: 45px;
+    .bar {
+      text-align: left;
+      nav {
+        display: block;
+      }
+      span {
+        float: right;
+      }
+    }
+  }
+  article {
+    margin: 0;
+    padding: 10px 15px;
+    padding-bottom: 20px;
+    text-align: left !important;
+    // code highlight
+    pre {
+      border: 1px solid $color-primary;
+    }
+    // table style
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 2px;
+      thead {
+        th {
+            padding: 3px 10px;
+        }
+        border-top: 1.5px solid $color-primary;
+        border-bottom: 1px solid $color-primary;
+      }
+      tbody {
+          td {
+              padding: 1px 10px;
+          }
+        border-bottom: 1.5px solid $color-primary;
+      }
+    }
+    blockquote {
+      border-left: 2px solid $color-primary;
+    }
+  }
+  .footer {
+    bottom: 0;
+    text-align: center;
+    height: 20px;
+    li {
+      padding: 2px 12px;
+      font-size: 14px;
+      list-style: none;
+    }
+  }
+  .bar {
+    margin: 0;
+    padding: 0 20px 0 20px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 7px 3px;
+        list-style: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// scroll bar
+.container::-webkit-scrollbar {
+  width: 3px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: $color-primary;
+}
+h1 {
+  font-size: $font-size-h1;
+  font-weight: bold;
+  //   font-variant: small-caps;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center !important;
+}
+h2 {
+  font-size: $font-size-h2;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+h3 {
+  font-size: $font-size-h3;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-style: italic;
+}
+h4 {
+  font-size: $font-size-h4;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+h5 {
+  font-size: $font-size-h5;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-style: italic;
+}
+h6 {
+  font-size: $font-size-h6;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+p {
+  margin: 10px;
+}
+hr {
+  border: 0;
+  border-top: 0.8px solid $color-primary;
+  margin: 0 0 0 0;
+}
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}

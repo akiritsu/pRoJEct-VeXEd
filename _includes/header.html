@@ -1,0 +1,34 @@
+<div class="header">
+    <nav class="bar">
+        <ul>
+            <li class="left">
+                {% if page.title %}
+                    {{ page.title }}
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </li>
+            <span>
+                {% if site.access_token != false %}
+                    <li class="right">
+                        <i class="fa fa-"></i>
+                    </li>
+                {% endif %}
+                {% if site.github != ""%}
+                    <li>
+                        <a href="https://github.com/{{site.github}}">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if page.multilanguage == true %}
+                    <li class="right">
+                        <i class="fa fa-language"></i>
+                    </li>
+                {% endif %}
+                <!-- add other buttons here -->
+            </span>
+        </ul>
+    </nav>
+    <hr>
+</div>

@@ -1,16 +1,18 @@
 <head>
-    <meta charset="utf-8">
+    <meta
+    charset="utf-8"/>
     <!-- multi-device width -->
     <meta
-    content="width=device-width, initial-scale=1" name="viewport">
+    content="width=device-width, initial-scale=1" name="viewport"/>
     <!-- site description -->
     {% if page.excerpt %}
-        {% assign desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}
+        {% assign desc = page.excerpt | strip_html |
+  strip_newlines | truncate: 160 %}
     {% else %}
         {% assign desc = site.description %}
     {% endif %}
     <meta
-    content="{{ desc }}" name="description">
+    content="{{ desc }}" name="description"/>
     <!-- referer for 3rd-part images-->
     <meta
     content="no-referrer" name="referrer"/>
@@ -24,15 +26,21 @@
     </title>
     <!-- icon -->
     <link
-    href="/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon">
+    href="/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon"/>
     <!-- main stylesheet -->
     <link
-    rel="stylesheet" href="{{site.url}}{{site.baseurl}}/css/main.css" type="text/css">
+    rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css" type="text/css"/>
     <!-- fa 5.9.0 -->
     <link
-    rel="stylesheet" href="{{site.url}}{{site.baseurl}}/css/fa.min.css" type="text/css">
+    rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/fa.min.css" type="text/css"/>
+    <!-- rouge theme-->
+    <link
+    rel="stylesheet" href="{{site.url}}{{site.baseurl}}/css/rouge-black-green.css"/>
     <!-- mathjax -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    <!-- jquery -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    async
+  ></script>
+<!-- jquery -->
     <!-- <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script> -->
 </head>
