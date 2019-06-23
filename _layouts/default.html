@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body>
-        {% include rolling.html %}
-        <div class="container">
-            {% include header.html %}
-            <article itemscope itemtype="http://schema.org/BlogPosting">
-                {{ content }}
-            </article>
-            {% include footer.html %}
-        </div>
-    </body>
+  {% include head.html %}
+  <body class="page">
+    {% include bgtext.html %}
+    <div class="container">
+      {% include header.html %}
+      <div class="div_article">
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+          {{content}}
+          {% if page.loa == true %}
+          {% include loa.html %}
+          {% endif %}
+          {% if page.footer == true %}
+          {% include footer.html %}
+          {% endif %}
+        </article>
+      </div>
+    </div>
+  </body>
 </html>

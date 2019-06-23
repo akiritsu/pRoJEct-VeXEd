@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <!-- multi-device width -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- site description -->
+  
+  <meta content="" name="description" />
+  <!-- referer for 3rd-part images-->
+  <meta content="no-referrer" name="referrer" />
+  <!-- title -->
+  <title>
+    
+    pRoJEct-NeGYa
+    
+  </title>
+  <!-- icon -->
+  <link
+    href="/img/favicon.ico?"
+    rel="shortcut icon bookmark"
+    type="image/x-icon"
+  />
+  <!-- main stylesheet -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/css/main.css"
+    type="text/css"
+  />
+  <!-- fa 5.9.0 -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/css/fa.min.css"
+    type="text/css"
+  />
+  <!-- rouge theme-->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/css/rouge-bg.css"
+  />
+  <!-- mathjax -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    async
+  ></script>
+  <!-- jquery -->
+  <script
+    src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+</head>
+
+  <body class="page">
+    <!-- background animations -->
+<div class="div_bgtext">
+  <canvas id="c"></canvas>
+</div>
+<script>
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  var txts =
+    "αβγδεζηθικλμνξοπρστυφχψω≈≡≠＝≤≥＜＞≮≯∷±＋－×÷／∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌∽√";
+  txts = txts.split("");
+  var font_size = 12;
+  var columns = c.width / font_size;
+  var drops = [];
+  for (var x = 0; x < columns; x++) drops[x] = 1;
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, c.width, c.height);
+
+    ctx.fillStyle = "#490";
+    ctx.font = font_size + "px arial";
+    for (var i = 0; i < drops.length; i++) {
+      var text = txts[Math.floor(Math.random() * txts.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+      if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 20);
+</script>
+    <div class="container">
+      <div class="header">
+  <nav class="nav_bar">
+    <ul>
+      <!-- title -->
+      <li class="title">
+        
+        
+        
+      </li>
+      <!-- buttons -->
+      <span class="span_right">
+        <!-- home -->
+        
+        <li>
+          <a href="http://localhost:4000">
+            <i class="fa fa-home">
+              
+            </i>
+          </a>
+        </li>
+        
+        <!-- email -->
+        
+        <li>
+          <a href="mailto://deerrider@outlook.com">
+            <i class="fa fa-envelope-square">
+              
+            </i>
+          </a>
+        </li>
+        
+        <!-- github -->
+        
+        <li>
+          <a href="https://github.com/akiritsu">
+            <i class="fa fa-github">
+              
+            </i>
+          </a>
+        </li>
+        
+        <!-- popup table of content -->
+        
+        <li>
+          <a class="popup_btn" onclick="toggle_toc()">
+            <i class="fa fa-bars">
+              
+            </i>
+          </a>
+        </li>
+        
+      </span>
+    </ul>
+  </nav>
+  <hr />
+</div>
+<!-- table of content -->
+<div class="div_toc toc" id="popup_toc">
+   
+</div>
+<script>
+  function toggle_toc() {
+    var popup = document.getElementById("popup_toc");
+    popup.classList.toggle("show");
+  }
+</script>
+
+      <div class="div_article">
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+          <h1 id="404---page-not-found">404 - Page Not Found</h1>
+
+
+          
+          
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

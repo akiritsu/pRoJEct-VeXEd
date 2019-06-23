@@ -1,34 +1,81 @@
 <div class="header">
-    <nav class="bar">
-        <ul>
-            <li class="left">
-                {% if page.title %}
-                    {{ page.title }}
-                {% else %}
-                    {{ site.title }}
-                {% endif %}
-            </li>
-            <span>
-                {% if site.access_token != false %}
-                    <li class="right">
-                        <i class="fa fa-"></i>
-                    </li>
-                {% endif %}
-                {% if site.github != ""%}
-                    <li>
-                        <a href="https://github.com/{{site.github}}">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if page.multilanguage == true %}
-                    <li class="right">
-                        <i class="fa fa-language"></i>
-                    </li>
-                {% endif %}
-                <!-- add other buttons here -->
-            </span>
-        </ul>
-    </nav>
-    <hr>
+  <nav class="nav_bar">
+    <ul>
+      <!-- title -->
+      <li class="title">
+        {% if page.title != "" %}
+        {{ page.title }}
+        {% else %}
+        {{ site.title }}
+        {%if site.owner != ""%}
+        <p class="owner">- {{ site.owner }}</p>
+        {% endif %} {% endif %}
+      </li>
+      <!-- buttons -->
+      <span class="span_right">
+        <!-- home -->
+        {% if page.home_btn != false %}
+        <li>
+          <a href="{{ site.url }}{{ site.baseurl }}">
+            <i class="fa fa-home">
+              {% if page.btn_text == true %}
+              <p class="btn_text">Home</p>
+              {% endif %}
+            </i>
+          </a>
+        </li>
+        {% endif %}
+        <!-- email -->
+        {% if site.email != ""%}
+        <li>
+          <a href="mailto://{{ site.email }}">
+            <i class="fa fa-envelope-square">
+              {% if page.btn_text == true %}
+              <p class="btn_text">Email</p>
+              {% endif %}
+            </i>
+          </a>
+        </li>
+        {% endif %}
+        <!-- github -->
+        {% if site.github != "" %}
+        <li>
+          <a href="https://github.com/{{ site.github }}">
+            <i class="fa fa-github">
+              {% if page.btn_text == true %}
+              <p class="btn_text">Github</p>
+              {% endif %}
+            </i>
+          </a>
+        </li>
+        {% endif %}
+        <!-- popup table of content -->
+        {% if page.toc != false %}
+        <li>
+          <a class="popup_btn" onclick="toggle_toc()">
+            <i class="fa fa-bars">
+              {% if page.btn_text == true %}
+              <p class="btn_text">Content</p>
+              {% endif %}
+            </i>
+          </a>
+        </li>
+        {% endif %}
+      </span>
+    </ul>
+  </nav>
+  <hr />
 </div>
+<!-- table of content -->
+<div class="div_toc toc" id="popup_toc">
+  {% if page.toc_level %} {% assign toclv = page.toc_level %} {% elsif
+  site.toc_level %} {% assign toclv = site.toc_level %} {% else} {% assign toclv
+  = 3 %} {% endif %} {% include toc.html html=page sanitize=true class="ul_toc"
+  id="ul_toc" h_min=1 h_max=toclv %}
+</div>
+<script>
+  function toggle_toc() {
+    var popup = document.getElementById("popup_toc");
+    popup.classList.toggle("show");
+  }
+</script>

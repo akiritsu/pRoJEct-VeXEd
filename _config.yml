@@ -1,17 +1,20 @@
 title: pRoJEct-NeGYa
-url: "akiritsu.github.io/"
-# baseurl: "pRoJEct-NeGYa"
+owner: "DeerRIDER"
+url: "akiritsu.github.io"
+baseurl: ""
+# baseurl: "/pRoJEct-NeGYa"
+permalink: /:title/
+
 description: ""
 email: "deerrider@outlook.com"
 github: "akiritsu"
-access_token: true
-statement: "本网站归个人所有，所有信息都他吗我的"
+statement: "Designed by DeerRIDER, All Rights Reserved"
+# list of articles title
+loa_title: "List of Articles"
+# default max toc levels: 1 - 6 (h1 - h6)
+toc_level: 3
 
 markdown: kramdown
-# kramdown:
-#   input: GFM
-#   syntax_highlighter: rouge
-# plugins:
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
