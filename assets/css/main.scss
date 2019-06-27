@@ -24,10 +24,10 @@ $font-size-h4: 21px;
 $font-size-h5: 19.5px;
 $font-size-h6: 16px;
 $font-size-primary: 18.5px;
-$font-smaller: 80%;
-$bgtext-duration: 1.2s;
-$bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
-
+$font-smaller: 88%;
+$font-bigger: 108%;
+$blk-duration: 1.2s;
+$blk-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
 // global style: screen width > 800 px
 .page {
   height: 100%;
@@ -36,13 +36,14 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
   padding: 0;
   position: fixed;
   text-align: center;
-  line-height: 1.35;
+  line-height: 1.2;
   background-color: $color-bg;
   background-image: $image-background;
   font-size: $font-size-primary;
   color: $color-primary;
   font-family: $font-family;
-  .div_bgtext {
+  .div_bg {
+    top: -4px;
     height: 100%;
     width: 100% !important;
     text-align: left;
@@ -52,49 +53,53 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
     overflow: none;
     top: 2%;
     margin: 0 auto;
-    height: 96%;
+    height: 97%;
     width: 84%;
     max-width: 1240px;
     position: relative;
     box-sizing: border-box; // interior border
-    border: 1px solid $color-primary;
     background-color: rgba($color-postbg, 0.72);
     .header {
       position: absolute;
       text-align: center;
       width: 100%;
+      height: 33px;
+      border: 1px solid $color-primary;
+      border-bottom: none;
       .nav_bar {
         text-align: left;
         display: block;
         list-style: none;
-        padding: 6px 15px;
+        padding: 6px 12px;
         word-wrap: none;
         overflow: hidden;
         white-space: nowrap;
-        .title {
-          max-width: 60%;
-          text-transform: capitalize;
-          .owner {
-            margin: 0;
-            font-size: $font-smaller;
-            display: inline-block;
-          }
-        }
-        .span_right {
-          max-width: 40%;
-          float: right;
-        }
         ul {
           padding: 0;
           margin: 0;
-          li {
-            border: none;
+          font-size: $font-smaller;
+          .li_left {
             list-style: none;
             display: inline-block;
+            cursor: pointer;
+          }
+          .span_right {
+            float: right;
+            max-width: 60%;
+            .title {
+              font-weight: 450;
+            }
+            .owner {
+              font-weight: 200;
+            }
+          }
+          .header_btn {
+            display: inline-block;
             .btn_text {
-              font-style: none;
+              font-style: normal;
               margin: 0;
-              display: inline-block;
+              display: inline-block;            
+              text-transform: capitalize;
               font-family: $font-family;
               font-size: $font-smaller;
             }
@@ -106,12 +111,16 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
         }
       }
     }
+
     .div_article {
+      top: 34px;
+      position: relative;
       height: 95%;
       width: 100%;
       overflow-y: auto;
       overflow-x: hidden;
-      margin-top: 37px;
+      border: 1px solid $color-primary;
+      border-top: none;
       .post_info {
         text-align: right;
         padding: 0 50px;
@@ -129,6 +138,7 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
         margin: 0;
         padding: 10px 15px 0px 15px;
         text-align: left !important;
+        min-height: 90%;
         // code highlight
         pre {
           border: 1px solid $color-primary;
@@ -141,16 +151,17 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
           line-height: 1;
           thead {
             th {
-              padding: 6px 10px;
+              padding: 10px 10px;
+              font-size: $font-bigger;
             }
-            border-top: 1.5px solid rgba($color-primary, 0.8);
-            border-bottom: 1px solid rgba($color-primary, 0.6);
+            border-top: 1.3px solid rgba($color-primary, 0.7);
+            border-bottom: 1px solid rgba($color-primary, 0.4);
           }
           tbody {
             td {
-              padding: 6px 10px;
+              padding: 8px 10px;
             }
-            border-bottom: 1.5px solid rgba($color-primary, 0.8);
+            border-bottom: 1.3px solid rgba($color-primary, 0.7);
             .td_title {
               text-transform: capitalize;
               a:link {
@@ -182,10 +193,13 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
       background-color: $color-primary;
     }
     .footer {
-      bottom: 0;
+      height: auto;
+      padding: 3% 0 1% 0;
+      margin: 10px 0 10px 0;
+      position: relative;
       text-align: center;
-      margin: 50px 0 25px 0;
       .nav_bar {
+        bottom: 0;
         margin: 0;
         padding: 0 10px 0 10px;
         ul {
@@ -221,12 +235,12 @@ $bgtext-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
     position: absolute;
     z-index: 1;
     bottom: auto;
-    top: 37px;
+    top: 36px;
     right: -0.5px;
     border: 1px solid rgba($color-primary, 0.6);
     // toc font settings
     ul {
-      padding: 0 4px 0 18px;
+      padding: 0 4px 0 20px;
       li a {
         font-size: 15px;
         color: $color-primary;
@@ -365,23 +379,11 @@ body {
       word-break: break-all;
       font-weight: bold;
       color: $color-primary;
-      animation: blktxt $bgtext-duration $bgtext-timing-function infinite;
-      -webkit-animation: blktxt $bgtext-duration $bgtext-timing-function
-        infinite;
-      -moz-animation: blktxt $bgtext-duration $bgtext-timing-function infinite;
-      -ms-animation: blktxt $bgtext-duration $bgtext-timing-function infinite;
-      -o-animation: blktxt $bgtext-duration $bgtext-timing-function infinite;
-    }
-  }
-}
-// screen width > 800 px and <= 1200 px
-@media screen and (max-width: 1200px) and (min-width: 800px) {
-  .page .container {
-    .header .nav_bar ul li .btn_text {
-      font-size: 0px;
-    }
-    .header .nav_bar .title .owner {
-      font-size: 0px;
+      animation: blktxt $blk-duration $blk-timing-function infinite;
+      -webkit-animation: blktxt $blk-duration $blk-timing-function infinite;
+      -moz-animation: blktxt $blk-duration $blk-timing-function infinite;
+      -ms-animation: blktxt $blk-duration $blk-timing-function infinite;
+      -o-animation: blktxt $blk-duration $blk-timing-function infinite;
     }
   }
 }
@@ -395,13 +397,24 @@ body {
     margin: 0;
     border: 1.8px solid $color-primary;
     background-color: rgba($color-postbg, 0.7);
-    .header .nav_bar ul li .btn_text {
-      font-size: 0px;
+    .header {
+      border: none;
+      #mxmz_btn {
+        display: none;
+      }
     }
-    .header .nav_bar .title {
-      font-size: 80%;
+    .div_article {
+      border: none;
+    }
+    .header .nav_bar ul .header_btn .btn_text {
+      font-size: 0;
+    }
+    .header .nav_bar ul {
+      .title {
+        font-size: 80%;
+      }
       .owner {
-        font-size: 0px;
+        font-size: 0;
       }
     }
   }

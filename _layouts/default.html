@@ -2,19 +2,20 @@
 <html>
   {% include head.html %}
   <body class="page">
-    {% include bgtext.html %}
-    <div class="container">
+    {% include background.html %}
+    <div class="container" id="ctner">
       {% include header.html %}
-      <div class="div_article">
-        <article itemscope itemtype="http://schema.org/BlogPosting">
-          {{content}}
-          {% if page.loa == true %}
-          {% include loa.html %}
+      <div class="div_article" id="div_atcl">       
+        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
+          {% if page.encrypted_text %}
+          {% include encrypted_text.html %}
           {% endif %}
+          {{content}}
+          {% include list_of_articles.html %}
+        </article>
           {% if page.footer == true %}
           {% include footer.html %}
           {% endif %}
-        </article>
       </div>
     </div>
   </body>

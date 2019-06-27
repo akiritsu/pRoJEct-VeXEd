@@ -3,9 +3,13 @@
   <!-- multi-device width -->
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <!-- site description -->
-  {% if page.excerpt %} {% assign desc = page.excerpt | strip_html |
-  strip_newlines | truncate: 160 %} {% else %} {% assign desc = site.description
-  %} {% endif %}
+  {% if page.excerpt %}
+  {% assign desc = page.excerpt | strip_html |
+  strip_newlines | truncate: 160 %}
+  {% else %}
+  {% assign desc = site.description
+  %}
+  {% endif %}
   <meta content="{{ desc }}" name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
@@ -18,37 +22,13 @@
     {% endif %}
   </title>
   <!-- icon -->
-  <link
-    href="/img/favicon.ico?"
-    rel="shortcut icon bookmark"
-    type="image/x-icon"
-  />
+  <link href="{{site.url }}{{site.baseurl}}{{site.assets_path}}/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
   <!-- main stylesheet -->
-  <link
-    rel="stylesheet"
-    href="{{ site.url }}{{ site.baseurl }}/css/main.css"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/main.css" type="text/css" />
   <!-- fa 5.9.0 -->
-  <link
-    rel="stylesheet"
-    href="{{ site.url }}{{ site.baseurl }}/css/fa.min.css"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
-  <link
-    rel="stylesheet"
-    href="{{ site.url }}{{ site.baseurl }}/css/rouge-bg.css"
-  />
-  <!-- mathjax -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-    async
-  ></script>
-  <!-- jquery -->
-  <script
-    src="http://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-</head>
+  <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/rouge-bg.css" />
+  <!-- mathjax 2.7.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  </head>

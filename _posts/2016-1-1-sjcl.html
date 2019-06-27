@@ -1,0 +1,41 @@
+---
+layout: post
+title: An Encrypt and Dectrypt tool with sjcl.js
+author: DeerRIDER
+category: Sample
+date: 2017-3-3
+---
+
+<!-- aes encrypt and decrypt method -->
+<script
+  src="{{ site.url }}{{ site.baseurl }}{{ site.assets_path }}/js/sjcl.js"
+  async
+></script>
+
+<div class="div_token">
+  Password:
+  <br />
+  <input class="access_token" id="pwd" />
+  <br />
+  Message:
+  <br />
+  <input class="access_token" id="msg" />
+  <br />
+  <button class="encrypt" onclick="encrypt()">Encrypt</button>
+  <hr />
+  Ciphertext:
+  <br />
+  <input class="access_token" id="ct" />
+  <br />
+  <button class="encrypt" onclick="decrypt()">Decrypt</button>
+</div>
+<script>
+  function encrypt() {
+    var result = sjcl.json.encrypt("pw123", '{text: "this should be decrypted"}');
+    var originalText = sjcl.json.decrypt("pw123", result); 
+    var pwd = document.getElementById("pwd").innerHTML;
+    var msg = document.getElementById("msg").innerHTML;
+    console.log(result+" - "+originalText+" - "+pwd+" - "+msg); 
+    document.getElementById("ct").innerHTML = sjcl.encrypt(pwd, msg);
+  }
+</script>

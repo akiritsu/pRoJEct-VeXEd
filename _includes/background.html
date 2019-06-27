@@ -1,5 +1,5 @@
 <!-- background animations -->
-<div class="div_bgtext">
+<div class="div_bg">
   <canvas id="c"></canvas>
 </div>
 <script>
@@ -7,8 +7,7 @@
   var ctx = c.getContext("2d");
   c.height = window.innerHeight;
   c.width = window.innerWidth;
-  var txts =
-    "αβγδεζηθικλμνξοπρστυφχψω≈≡≠＝≤≥＜＞≮≯∷±＋－×÷／∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌∽√";
+  var txts = "{{site.bgtext}}";
   txts = txts.split("");
   var font_size = 12;
   var columns = c.width / font_size;
@@ -18,7 +17,6 @@
   function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, c.width, c.height);
-
     ctx.fillStyle = "#490";
     ctx.font = font_size + "px arial";
     for (var i = 0; i < drops.length; i++) {

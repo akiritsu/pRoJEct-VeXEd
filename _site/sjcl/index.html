@@ -12,7 +12,7 @@
   <!-- title -->
   <title>
     
-    pRoJEct-NeGYa
+    An Encrypt and Dectrypt tool with sjcl.js
     
   </title>
   <!-- icon -->
@@ -186,7 +186,70 @@
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           
-          <h1 id="404---page-not-found">404 - Page Not Found</h1>
+          <h1>
+  An Encrypt and Dectrypt tool with sjcl.js
+</h1>
+<div class="post_info">
+  <!-- author -->
+  
+  <span>
+    <i class="fa fa-user-secret"></i>
+    DeerRIDER
+  </span>
+  
+  <!-- date -->
+  
+  <span>
+    <i class="fa fa-calendar"></i>
+    Mar 03, 2017
+  </span>
+  
+  <!-- category -->
+  
+  <span>
+    <i class="fa fa-archive"></i>
+    Sample
+  </span>
+  
+</div>
+<!-- abstract -->
+<div class="abstract">
+  
+</div>
+
+<!-- aes encrypt and decrypt method -->
+<script
+  src="http://localhost:4000/assets/js/sjcl.js"
+  async
+></script>
+
+<div class="div_token">
+  Password:
+  <br />
+  <input class="access_token" id="pwd" />
+  <br />
+  Message:
+  <br />
+  <input class="access_token" id="msg" />
+  <br />
+  <button class="encrypt" onclick="encrypt()">Encrypt</button>
+  <hr />
+  Ciphertext:
+  <br />
+  <input class="access_token" id="ct" />
+  <br />
+  <button class="encrypt" onclick="decrypt()">Decrypt</button>
+</div>
+<script>
+  function encrypt() {
+    var result = sjcl.json.encrypt("pw123", '{text: "this should be decrypted"}');
+    var originalText = sjcl.json.decrypt("pw123", result); 
+    var pwd = document.getElementById("pwd").innerText;
+    var msg = document.getElementById("msg").innerText;
+    console.log(result+" - "+originalText+" - "+pwd+" - "+msg); 
+    document.getElementById("ct").innerText = sjcl.encrypt(pwd, msg);
+  }
+</script>
 
 
           

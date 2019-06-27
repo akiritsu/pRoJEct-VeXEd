@@ -1,12 +1,14 @@
 ---
 layout: default
-loa: true
+post_list: "date"
 toc: false
 home_btn: true
-btn_text: false
+btn_text: true
 footer: true
+aes: true
 title: ""
 author: ""
+encrypted_text: true
 permalink: /
 ---
 
@@ -15,6 +17,10 @@ permalink: /
 ## Minimal Features
 * Highly customizable, content oriented
 * Table of content
+* Decrypt and encrypt text (access token: 233): 
+
+<p class="encrypted">nn5mLXlhOkgwvFFLYU9OSE9r6ksdGU+ql7i4/6TIkw==</p>
+
 * Support LaTeX formula with MathJax
 
 $$
@@ -35,6 +41,7 @@ end
   * See files under: pages/, _posts/
 * Website layouts are kept with HTML, CSS and JS files
   * See files under: _layouts/, _includes/, css/
+
 
 ## Update Log
 ##### Version 1.00:
