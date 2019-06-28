@@ -40,5 +40,5 @@ end
 ```
 ## Download and Documentation
 
-[**pRoJEct NeGYa (Github)**](https://github.com/akiritsu/pRoJEct-NeGYa)
+[**pRoJEct NeGYa (Github)a**](https://github.com/akiritsu/pRoJEct-NeGYa)
 
