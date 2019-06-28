@@ -7,9 +7,6 @@
       {% include header.html %}
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          {% if page.encrypted_text %}
-          {% include encrypted_text.html %}
-          {% endif %}
           {{content}}
           {% include list_of_articles.html %}
         </article>

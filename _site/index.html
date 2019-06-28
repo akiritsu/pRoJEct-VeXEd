@@ -102,8 +102,24 @@
             
           </i>
         </a>
+        
+        <!-- access token -->
+        
+        <a class="header_btn" id="acs_btn" onclick="apply_token()">
+          <i class="fa fa-key">
+            
+            <p class="btn_text">Token</p>
+            
+          </i>
+        </a>
+        <textarea
+          class="access_token"
+          rows="1"
+          cols="8"
+          id="acs_tkn"
+        ></textarea>
+        
       </li>
-      
       <!-- right header -->
       <span class="span_right">
         <!-- popup table of content -->
@@ -117,25 +133,7 @@
   </nav>
   <hr />
 </div>
-<!-- table of content -->
-<div class="div_toc toc" id="popup_toc">
-   
-</div>
-<!-- toggle toc -->
-<script>
-  function toggle_toc() {
-    var popup = document.getElementById("popup_toc");
-    popup.classList.toggle("show");
-  }
-</script>
-<!-- scroll page -->
-<script>
-  function scroll_percentage(mtpler) {
-    document
-      .getElementById("div_atcl")
-      .scrollBy(0, window.innerHeight * mtpler);
-  }
-</script>
+ 
 <!-- toggle maximize -->
 <script>
   var ctner_state = 0;
@@ -162,65 +160,44 @@
     }
   }
 </script>
-
-      <div class="div_article" id="div_atcl">       
-        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          
-          <!-- aes encrypt and decrypt method -->
+ 
+<!-- encrypt and decrypt -->
 <script
   src="http://localhost:4000/assets/js/sjcl.js"
   async
 ></script>
-<div class="div_token">
-  <input
-    class="access_token"
-    id="acs_tkn"
-    autofocus="autofocus"
-    type="password"
-  />
-  <button class="apply_token" onclick="apply_token()">
-    Apply Token
-  </button>
-</div>
-<!-- decrypt elements -->
 <script>
-  function decrypt_all(passwd, class_name) {
-    elem_clct = document.getElementsByClassName(class_name);
+  function decrypt_all(pwd, class_name) {
+    var elem_clct = document.getElementsByClassName(class_name);
     if (elem_clct.length == 0) {
       console.log("No texts to decrypt!");
       return false;
     }
-    if (true) {
-      for (acc = 0; acc < elem_clct.length; acc++) {
-        var encrypted = elem_clct[acc].innerHTML.toString;
-        var cipher_text = {ct: encrypted};
-        console.log(cipher_text);
-        sjcl.decrypt("123",{"iv":"mlr6LNDhCRyyGHna6oH8aw==",
-"v":1,
-"iter":1000,
-"ks":128,
-"ts":64,
-"mode":"ccm",
-"adata":"",
-"cipher":"aes",
-"salt":"jEwFMPufL9M=",
-"ct":"V7pxFmgFrqaeOArqpUmiikxpLBJGNBNUahl4tboeNw=="}.stringify);
-        // elem_clct[acc].innerHTML = sjcl.decrypt(passwd,encrypted);
-      return true;
+    for (acc = 0; acc < elem_clct.length; acc++) {
+      var encrypted = elem_clct[acc].innerHTML;
+      var ct =
+        '{"iv":"' +
+        encrypted.substring(0, 22) +
+        '==",salt:"","ct":"' +
+        encrypted.substring(22) +
+        '"}';
+      var txt = sjcl.json.decrypt(pwd, ct);
+      elem_clct[acc].innerHTML = txt;
     }
-    return false;
+    return true;
   }
-}
   function apply_token() {
-    if (decrypt_all(document.getElementById("acs_tkn"), "encrypted")) {
-    
-      console.log(document.getElementById("acs_tkn").innerHTML);
-      document.getElementById("acs_tkn").style.display = "none";
+    var tkn = document.getElementById("acs_tkn");
+    if (decrypt_all(tkn.value, "encrypted")) {
+      tkn.style.display = "none";
+      document.getElementById("acs_btn").style.display = "none";
     }
   }
 </script>
 
-          
+
+      <div class="div_article" id="div_atcl">       
+        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <h1 id="project-negya---hacker-style-personal-homepage">PROJECT NEGYA - HACKER-STYLE PERSONAL HOMEPAGE</h1>
 
 <h2 id="minimal-features">Minimal Features</h2>
@@ -230,10 +207,18 @@
   <li>Decrypt and encrypt text (access token: 233):</li>
 </ul>
 
-<p class="encrypted">nn5mLXlhOkgwvFFLYU9OSE9r6ksdGU+ql7i4/6TIkw==</p>
+<p>secret msg 1:</p>
+
+<p class="encrypted">/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==
+</p>
 
 <ul>
-  <li>Support LaTeX formula with MathJax</li>
+  <li>
+    <p>secret msg 1:</p>
+  </li>
+  <li>
+    <p>Support LaTeX formula with MathJax</p>
+  </li>
 </ul>
 
 <script type="math/tex; mode=display">NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!</script>
@@ -266,7 +251,8 @@
 <h5 id="version-100">Version 1.00:</h5>
 <p>Development pRoJEct-NeGYa ends. No future updates or bug fixes.</p>
 
-<p>Good Luck!</p>
+<p>Good Luck!
+{“iv”:”DqYimdTr2pleoC2e4fRyTw==”,”v”:1,”iter”:10000,”ks”:128,”ts”:64,”mode”:”ccm”,”adata”:””,”cipher”:”aes”,”salt”:”l3FvlZbPiYI=”,”ct”:”+saS9Z+OaJ6GBA==”}</p>
 
           
 <!-- list of articles: sort by date (by default) -->

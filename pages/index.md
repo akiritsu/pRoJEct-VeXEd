@@ -5,7 +5,6 @@ toc: false
 home_btn: true
 btn_text: true
 footer: true
-aes: true
 title: ""
 author: ""
 encrypted_text: true
@@ -19,7 +18,13 @@ permalink: /
 * Table of content
 * Decrypt and encrypt text (access token: 233): 
 
-<p class="encrypted">nn5mLXlhOkgwvFFLYU9OSE9r6ksdGU+ql7i4/6TIkw==</p>
+secret msg 1:
+
+<p class="encrypted">/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==
+</p>
+
+  * secret msg 1: 
+
 
 * Support LaTeX formula with MathJax
 
@@ -48,3 +53,4 @@ end
 Development pRoJEct-NeGYa ends. No future updates or bug fixes.
 
 Good Luck!
+{"iv":"DqYimdTr2pleoC2e4fRyTw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"l3FvlZbPiYI=","ct":"+saS9Z+OaJ6GBA=="}

@@ -102,8 +102,24 @@
             
           </i>
         </a>
+        
+        <!-- access token -->
+        
+        <a class="header_btn" id="acs_btn" onclick="apply_token()">
+          <i class="fa fa-key">
+            
+            <p class="btn_text">Token</p>
+            
+          </i>
+        </a>
+        <textarea
+          class="access_token"
+          rows="1"
+          cols="8"
+          id="acs_tkn"
+        ></textarea>
+        
       </li>
-      
       <!-- right header -->
       <span class="span_right">
         <!-- popup table of content -->
@@ -137,6 +153,7 @@
   </nav>
   <hr />
 </div>
+
 <!-- table of content -->
 <div class="div_toc toc" id="popup_toc">
    <ul id="ul_toc" class="ul_toc">
@@ -173,6 +190,7 @@
       .scrollBy(0, window.innerHeight * mtpler);
   }
 </script>
+ 
 <!-- toggle maximize -->
 <script>
   var ctner_state = 0;
@@ -199,10 +217,44 @@
     }
   }
 </script>
+ 
+<!-- encrypt and decrypt -->
+<script
+  src="http://localhost:4000/assets/js/sjcl.js"
+  async
+></script>
+<script>
+  function decrypt_all(pwd, class_name) {
+    var elem_clct = document.getElementsByClassName(class_name);
+    if (elem_clct.length == 0) {
+      console.log("No texts to decrypt!");
+      return false;
+    }
+    for (acc = 0; acc < elem_clct.length; acc++) {
+      var encrypted = elem_clct[acc].innerHTML;
+      var ct =
+        '{"iv":"' +
+        encrypted.substring(0, 22) +
+        '==",salt:"","ct":"' +
+        encrypted.substring(22) +
+        '"}';
+      var txt = sjcl.json.decrypt(pwd, ct);
+      elem_clct[acc].innerHTML = txt;
+    }
+    return true;
+  }
+  function apply_token() {
+    var tkn = document.getElementById("acs_tkn");
+    if (decrypt_all(tkn.value, "encrypted")) {
+      tkn.style.display = "none";
+      document.getElementById("acs_btn").style.display = "none";
+    }
+  }
+</script>
+
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          
           <h1>
   Text Styles and Markdown Quick Reference
 </h1>
@@ -241,6 +293,9 @@
 <h3 id="text">Text</h3>
 
 <p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
+
+<p>Encrypted text:<br /></p>
+<p class="encrypted">XM+jP90DSP7Z7VBen+BJzAMkqhOdT2e6t4/z/yj54=</p>
 
 <p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
 
@@ -331,7 +386,7 @@
 </table>
 
 <h3 id="image">image</h3>
-<p><img src="http://localhost:4000/img/img-sample.jpg" alt="img-smpl" /></p>
+<p><img src="http://localhost:4000/assets/img/img-sample.jpg" alt="img-smpl" /></p>
 
 <h3 id="heading">heading</h3>
 <h4 id="this-is-heading-4">This is heading 4</h4>
