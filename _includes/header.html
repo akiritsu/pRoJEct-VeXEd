@@ -168,7 +168,12 @@
         '==",salt:"","ct":"' +
         encrypted.substring(22) +
         '"}';
-      var txt = sjcl.json.decrypt(pwd, ct);
+      try {
+        var txt = sjcl.json.decrypt(pwd, ct);
+      } catch (e) {
+        alert("Invalid Access Token!");
+        return;
+      }
       elem_clct[acc].innerHTML = txt;
     }
     return true;

@@ -238,7 +238,12 @@
         '==",salt:"","ct":"' +
         encrypted.substring(22) +
         '"}';
-      var txt = sjcl.json.decrypt(pwd, ct);
+      try {
+        var txt = sjcl.json.decrypt(pwd, ct);
+      } catch (e) {
+        alert("Invalid Access Token!");
+        return;
+      }
       elem_clct[acc].innerHTML = txt;
     }
     return true;
@@ -295,7 +300,7 @@
 <p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
 
 <p>Encrypted text:<br /></p>
-<p class="encrypted">XM+jP90DSP7Z7VBen+BJzAMkqhOdT2e6t4/z/yj54=</p>
+<p class="encrypted">elKwQPCOLF4w86wRItKMqge8qDO6fU80wbdANG6AnS8kgT8qAqGFC5VkVexu+4RBhBMUWwdkzEVo8HAKUT</p>
 
 <p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
 

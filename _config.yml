@@ -11,8 +11,8 @@ webrick:
   headers:
     Access-Control-Allow-Origin: "*"
 ## Global Variables
-email: "deerrider@outlook.com"
-github: "akiritsu"
+email: "akiritsu@outlook.com"
+github: "akiritsu/pRoJEct-NeGYa"
 # path to: css/, fonts/, img/ and js/
 assets_path: "/assets" # i.e. "/assets" 
 statement: "Designed by DeerRIDER, All Rights Reserved"

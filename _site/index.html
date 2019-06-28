@@ -181,7 +181,12 @@
         '==",salt:"","ct":"' +
         encrypted.substring(22) +
         '"}';
-      var txt = sjcl.json.decrypt(pwd, ct);
+      try {
+        var txt = sjcl.json.decrypt(pwd, ct);
+      } catch (e) {
+        alert("Invalid Access Token!");
+        return;
+      }
       elem_clct[acc].innerHTML = txt;
     }
     return true;
@@ -200,25 +205,21 @@
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <h1 id="project-negya---hacker-style-personal-homepage">PROJECT NEGYA - HACKER-STYLE PERSONAL HOMEPAGE</h1>
 
-<h2 id="minimal-features">Minimal Features</h2>
+<h2 id="features">Features</h2>
 <ul>
-  <li>Highly customizable, content oriented</li>
-  <li>Table of content</li>
-  <li>Decrypt and encrypt text (access token: 233):</li>
-</ul>
-
-<p>secret msg 1:</p>
-
-<p class="encrypted">/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==
-</p>
-
-<ul>
-  <li>
-    <p>secret msg 1:</p>
+  <li>Highly customizable, content-oriented with The Matrix style</li>
+  <li>Eyesight-protection layout</li>
+  <li>Decrypt and encrypt text (access token: 233):
+    <ul>
+      <li>secret msg 1:</li>
+    </ul>
+    <p class="encrypted">/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==</p>
+    <ul>
+      <li>secret msg 2:</li>
+    </ul>
+    <p class="encrypted">G7D+0370pNmixIP1j7teCg1jtm9XCdOWYFH61lcM0LYWlT0hB3rS9raIs=</p>
   </li>
-  <li>
-    <p>Support LaTeX formula with MathJax</p>
-  </li>
+  <li>LaTeX formula Support with MathJax</li>
 </ul>
 
 <script type="math/tex; mode=display">NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!</script>
@@ -232,27 +233,10 @@
   <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="k">end</span>
 </code></pre></div></div>
+<h2 id="download-and-documentation">Download and Documentation</h2>
 
-<ul>
-  <li>Protect your eyes from hard light</li>
-  <li>Context are kept with Markdown files
-    <ul>
-      <li>See files under: pages/, _posts/</li>
-    </ul>
-  </li>
-  <li>Website layouts are kept with HTML, CSS and JS files
-    <ul>
-      <li>See files under: _layouts/, _includes/, css/</li>
-    </ul>
-  </li>
-</ul>
+<p><a href="https://github.com/akiritsu/pRoJEct-NeGYa"><strong>pRoJEct NeGYa (Github)</strong></a></p>
 
-<h2 id="update-log">Update Log</h2>
-<h5 id="version-100">Version 1.00:</h5>
-<p>Development pRoJEct-NeGYa ends. No future updates or bug fixes.</p>
-
-<p>Good Luck!
-{“iv”:”DqYimdTr2pleoC2e4fRyTw==”,”v”:1,”iter”:10000,”ks”:128,”ts”:64,”mode”:”ccm”,”adata”:””,”cipher”:”aes”,”salt”:”l3FvlZbPiYI=”,”ct”:”+saS9Z+OaJ6GBA==”}</p>
 
           
 <!-- list of articles: sort by date (by default) -->
