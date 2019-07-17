@@ -1,8 +1,7 @@
 ## Settings
 title: pRoJEct-NeGYa
 owner: "DeerRIDER"
-# url: "akiritsu.github.io"
-baseurl: ""
+url: "https://akiritsu.github.io"
 baseurl: "/pRoJEct-NeGYa"
 permalink: /:title/
 description: ""
