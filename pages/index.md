@@ -13,17 +13,14 @@ permalink: /
 
 # PROJECT NEGYA - HACKER-STYLE PERSONAL HOMEPAGE
 
-
-
-
 ##  Features
 * Highly customizable, content-oriented with The Matrix style
 * Eyesight-protection layout
 * Decrypt and encrypt text (access token: 233): 
   * secret msg 1: 
-  <p class="encrypted">/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==</p>
+  <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Please add access token to browse encrypted content!</p>
   * secret msg 2: 
-  <p class="encrypted">G7D+0370pNmixIP1j7teCg1jtm9XCdOWYFH61lcM0LYWlT0hB3rS9raIs=</p>
+  <p class="encrypted" id="G7D+0370pNmixIP1j7teCg1jtm9XCdOWYFH61lcM0LYWlT0hB3rS9raIs=">Please add access token to browse encrypted content!</p>
 * LaTeX formula Support with MathJax
 
 $$
