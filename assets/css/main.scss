@@ -11,13 +11,13 @@ $color-bg: rgb(0, 0, 0);
 $color-postbg: rgb(0, 0, 0);
 $image-background: none;
 @font-face {
-  font-family: "Fira Code";
+  font-family: "Fira Code Online";
   src: url("../fonts/FiraCode-Regular.woff");
 }
 $font-family: 
-"Fira Code Regular", 
-"Source Code Pro", 
 "Fira Code", 
+"Source Code Pro", 
+"Fira Code Online", 
 "Source-Han-Sans-Medium", 
 "PingFang SC",
 "Hiragino Sans GB", 
@@ -158,7 +158,7 @@ $blk-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
         min-height: 90%;
         // code highlight
         pre {
-          border: 1px solid $color-primary;
+          border: 0.6px solid $color-primary;
         }
         // table style
         table {

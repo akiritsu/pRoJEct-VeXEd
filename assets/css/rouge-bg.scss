@@ -1,42 +1,67 @@
+---
+Rouge Theme: Black and Green
+---
+
+@charset "utf-8";
+
+// Global Reset
+$text-primary:  #25c33a;
+$background: black;
+$comment: rgb(167, 168, 149);
+$punctuation: #3dc2ff;
+$error: #cc0000;
+$error-background: #250f0f;
+$keyword: #7934fa;
+$value: #b4c013;
+$variable: #d44639;
+$data-type: rgb(146, 251, 84);
+$class-name: #c23766;
+$string: rgb(255, 197, 71);
+$package: violet;
+$white-space: #c4ffcc;
+
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight {
-  color: #11a124;
-  background-color: black;
+  word-wrap: break-word;
+  color: $text-primary;
+  background-color: $background;
 }
 /* comment */
 .highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #7D7E70;
+  color: $comment;
   font-style: italic;
 }
+// Preprocessor comments
 .highlight .cp {
-  color: violet;
+  color: $keyword;
   font-weight: bold;
   font-style: italic;
 }
 .highlight .err {
-  color: #eeeeee;
-  background-color: #CC0000;
+  color: $error;
+  background-color: $error-background;
 }
 .highlight .gr {
-  color: #eeeeee;
-  background-color: #CC0000;
+  color: $error;
+  background-color: $error-background;
 }
 /* keyword */
 .highlight .k, .highlight .kd, .highlight .kv {
-  color: DarkTurquoise;
+  color: $keyword;
+  font-weight: bold;
 }
 .highlight .o, .highlight .ow {
-  color: pink;
+  color: $punctuation;
 }
 .highlight .p, .highlight .pi {
-  color: pink;
+  color: $punctuation;
 }
 .highlight .gd {
-  color: #CC0000;
+  color: $error;
 }
 .highlight .gi {
-  color: #3FB34F;
+  color: $text-primary;
 }
 .highlight .ge {
   font-style: italic;
@@ -45,123 +70,125 @@
   font-weight: bold;
 }
 .highlight .gt {
-  color: #AE999E;
-  background-color: #766DAF;
+  color: $error;
 }
+// line numbers
 .highlight .gl {
-  color: #AE999E;
-  background-color: #766DAF;
+  color: $background;
+  background: text-primary;
 }
 .highlight .kc {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .kn {
-  color: #AE999E;
+  color: $package;
   font-weight: bold;
 }
 .highlight .kp {
-  color: #AE999E;
+  color: $package;
   font-weight: bold;
 }
 .highlight .kr {
-  color: #AE999E;
+  color: $package;
   font-weight: bold;
 }
 .highlight .gh {
-  color: #AE999E;
+  color: $package;
   font-weight: bold;
 }
 .highlight .gu {
-  color: #aaaaaa;
+  color: $package;
   font-weight: bold;
 }
 .highlight .kt {
-  color: #EA8F5C;
+  color: $data-type;
   font-weight: bold;
 }
 .highlight .no {
-  color: #EA8F5C;
+  color: $data-type;
   font-weight: bold;
 }
 .highlight .nc {
-  color: #FAAF6C;
+  color: $class-name;
   font-weight: bold;
 }
 .highlight .nd {
-  color: #FAAF6C;
+  color: $class-name;
   font-weight: bold;
 }
 .highlight .nn {
-  color: #FAAF6C;
+  color: $class-name;
   font-weight: bold;
 }
 .highlight .bp {
-  color: #FAAF6C;
+  color: $class-name;
   font-weight: bold;
 }
 .highlight .ne {
-  color: #FAAF6C;
+  color: $class-name;
   font-weight: bold;
 }
 .highlight .nl {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .nt {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .ld {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .ss {
-  color: #9f93e6;
+  color: $value;
   font-weight: bold;
 }
 .highlight .s, .highlight .sb, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .s1 {
-  color: #fff0a6;
+  color: $string;
   font-weight: bold;
 }
 .highlight .se {
-  color: #EA8F5C;
+  color: $data-type;
   font-weight: bold;
 }
 .highlight .sc {
-  color: #EA8F5C;
+  color: $data-type;
   font-weight: bold;
 }
 .highlight .si {
-  color: #EA8F5C;
+  color: $data-type;
   font-weight: bold;
 }
 .highlight .nb {
   font-weight: bold;
 }
+// Token for entitites such as &nbsp; in HTML
 .highlight .ni {
-  color: #999999;
+  color: $value;
   font-weight: bold;
 }
+// specially highlighted whitespace
 .highlight .w {
-  color: #BBBBBB;
+  color: $white-space;
 }
 /* funtion delaration */
 .highlight .nf {
-    color: #912CAE;
+    color: $text-primary;
     font-weight: bold;
 }
 .highlight .py {
-  color: #912CAE;
+  color: $variable;
 }
 .highlight .na {
-  color: #912CAE;
+  color: $text-primary;
 }
 .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi {
-  color: #912CAE;
+  color: $variable;
   font-weight: bold;
 }
