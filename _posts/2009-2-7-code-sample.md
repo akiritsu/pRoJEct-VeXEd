@@ -1,7 +1,8 @@
 ---
 title: Sample Code - Quick Sort
 layout: post
-category: sample
+category: Sample
+date: 2019-2-4
 ---
 
 ## Quick sort in python
