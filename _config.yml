@@ -1,6 +1,6 @@
 ## Settings
 title: pRoJEct-NeGYa
-owner: "DeerRIDER"
+owner: "Kue"
 url: "https://akiritsu.github.io"
 baseurl: "/pRoJEct-NeGYa"
 permalink: /:title/
@@ -10,11 +10,11 @@ webrick:
   headers:
     Access-Control-Allow-Origin: "*"
 ## Global Variables
-email: "akiritsu@outlook.com"
-github: "akiritsu/pRoJEct-NeGYa"
+email: "kue_kid@hotmail.com"
+github: "kue-kid/pRoJEct-NeGYa"
 # path to: css/, fonts/, img/ and js/
 assets_path: "/assets" # i.e. "/assets" 
-statement: "Designed by DeerRIDER, All Rights Reserved"
+statement: "Designed by Kue, All Rights Reserved"
 # default max toc levels: 1 - 6 (h1 - h6)
 toc_level: 3
 # texts randomly displayed in background
