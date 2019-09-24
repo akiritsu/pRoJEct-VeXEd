@@ -1,0 +1,48 @@
+@font-face {
+font-family: UTUEK; /*font name*/
+src: url(https://googledrive.com/host/0B9YslyGnSwPPX3hPbHItOXVPRVU); /*eot file*/
+}
+
+@font-face {
+font-family: UTUEK; /*font name*/
+src: url(https://googledrive.com/host/0B9YslyGnSwPPa0JXeVJQckhwNjQ) format('truetype'); /*ttf file*/
+}
+/*
+h1,h2,h3,h4,h5,h6{
+font-family:UTUEK,tahoma,Arial,sans-serif;
+}
+*/
+
+
+/**********************************************
+Have a look at our code example
+@font-face {
+  font-family: ChunkFive;
+  src: url('fonts/ChunkFive.eot');
+  src: local('ChunkFive'),  url('fonts/ChunkFive.woff') format('woff'),  url('fonts/ChunkFive.otf') format('opentype'),  url('fonts/ChunkFive.svg#ChunkFive') format('svg');
+}
+h1 {
+  font-family: ChunkFive, „Impact“, sans-serif;
+}
+http://designlovr.com/30-beautiful-and-free-fonts-you-can-use-with-font-face/
+http://www.dafont.com/ducahier.font
+https://googledrive.com/host/0B9YslyGnSwPPWGp3bkJrTk1BNWM
+**********************************************/
+
+@font-face {
+  font-family: TASSELXP;
+  src: url('https://googledrive.com/host/0B9YslyGnSwPPWENOWXFWUGkyaDg'); /*eot file*/
+  src: local('TASSELXP'),  url('https://googledrive.com/host/0B9YslyGnSwPPamxmc0VpVG5rU1k') format('woff'), url('https://googledrive.com/host/0B9YslyGnSwPPZUNtZDFMajdHWW8') format('ttf'),  url('https://googledrive.com/host/0B9YslyGnSwPPQ1hBTUE0M2lpRzQ') format('opentype'),  url('https://googledrive.com/host/0B9YslyGnSwPPVTNsX0g0N2xSa0U#TASSELXP') format('svg');
+}
+
+/*
+h1 {
+  font-family: TASSELXP, „Impact“, sans-serif;
+}
+*/
+
+
+@font-face {
+ font-family:'NotethisRegular';src:url(https://googledrive.com/host/0B9YslyGnSwPPSWV6ZWNOMXI3SEU);
+ src:local('Note this Regular'),local('Notethis'),url(https://googledrive.com/host/0B9YslyGnSwPPbERKSU1CMjRmcVU) format('truetype');
+ }
