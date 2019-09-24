@@ -1,88 +1,32 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<!--
-
- +-+-+-+-+-+-+ +-+-+-+-+-+-+
- |F|r|i|e|n|d| |O|n|l|i|n|e|
- +-+-+-+-+-+-+ +-+-+-+-+-+-+
-
--->
 <head>
-<title>Online Friend!</title>
-<meta charset="utf-8">
-        <meta property="og:title" content="Online Friend!"/>
-        <meta property="og:url" content="http://apps.facebook.com/friend-online" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://kue.github.io/FriendOnline/users_image.png"/>
-        <meta property="og:site_name" content="Friend Online"/>
-        <meta property="og:description" content="ดูเเละตรวจสอบเพื่อนที่ online&offline facebook chat®"/>
-<link rel="stylesheet" href="assets/css.css">
-<link rel="icon" href="https://googledrive.com/host/0B9YslyGnSwPPQi0zdXJkaUxJYXM">
-<script type="text/javascript">
-function init() {
-    if (arguments.callee.done) return;
-    arguments.callee.done = true;
-};
-if (document.addEventListener) {
-    document.addEventListener("DOMContentLoaded", init, false);
-}
-/*@cc_on @*/
-/*@if (@_win32)
-document.write("<script id=\"__ie_onload\" defer=\"defer\" src=\"javascript:void(0)\"><\/script>");
-var script = document.getElementById("__ie_onload");
-script.onreadystatechange = function() {
-    if (this.readyState == "complete") {
-    init();
-    }
-};
-/*@end @*/
-if (/WebKit/i.test(navigator.userAgent)) {
-    var _timer = setInterval(function() {
-    if (/loaded|complete/.test(document.readyState)) {
-        clearInterval(_timer);
-        init();
-    }
-    }, 10);
-}
-window.onload = init;
-
-function RClick(e){
-	var e;
-   if(event.button==2) {
-      document.oncontextmenu =function() {
-	  return false;
-	  }
-  }
-}
-document.oncontextmenu=new Function("return false;");
-</script>
+  <meta charset="utf-8">
+  <title>Online Now</title>
+  <link rel="stylesheet" href="assets/css/screen.css">
+  <link rel="icon" href="assets/img/favicon.ico">
 </head>
 <body>
-<center>
-<div id="loading" style="background:#fff;width:100%;height:100%;position: fixed;top:0;left: 0;z-index:99999;margin: 0 auto;opacity:0.9">
-<span style="font-weight:bold;position: absolute;top:250px; left:338px;"></span>
-</div>
-</center>
-<script>
-window.onload = function () {
-document.getElementById('loading').style.display = "none";}
-</script>
-<div id="fb-root"></div>
-<div id="wrapper">
-<div id="header">
-<b><label style="font-family:UTUEK;">F</label>riend Online</b></div>
-<div id="friends">
-<div style="text-align:center;color:#777;font-size:28px;margin:120px 0px 30px 0px;opacity:0.8;"><a class="loading loading_a"></a></div>
-<div style="text-align:center;color:#777;font-family:UTUEK,tahoma,Arial,sans-serif;font-size:24px;margin:30px 0px 120px 0px;opacity:0.5;">รอสักครู่!</div>
-</div>
-</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write(unescape('%3Cscript src="assets/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="assets/App.js"></script>
-<script src="assets/staticJS.js"></script>
-<div align="center" style="opacity:0.8;">
-<a class="googleapp googleapp_a"></a>
-</div>
+  <div id="fb-root"></div>
+
+  <div id="wrapper">
+    <div id="header">
+      <h2>Online Now</h2>
+      <script>
+        document.write(unescape('%3Cscript src="//platform.twitter.com/widgets.js"%3E%3C/script%3E'));
+        document.write('<a href="https://twitter.com/jakejarvis" class="twitter-follow-button" data-show-count="true"></a>');
+      </script>
+    </div>
+    <div id="friends">
+      <div style="text-align:center;color:#777;font-size:28px;margin:120px 0px 30px 0px;">Loading...</div>
+      <div style="text-align:center;color:#777;font-size:12px;margin:30px 0px 120px 0px;">If nothing appears in a few seconds, please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="https://onlinenow.zendesk.com/anonymous_requests/new" target="_blank">ask for help</a>.</div>
+    </div>
+  </div>
+
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(unescape('%3Cscript src="assets/js/jquery.min.js"%3E%3C/script%3E'))</script> <!-- Google CDN Fallback -->
+  <script src="assets/js/application.min.js"></script>
 
 </body>
 </html>

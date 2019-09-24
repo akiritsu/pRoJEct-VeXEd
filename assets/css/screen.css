@@ -1,0 +1,188 @@
+body {
+  background: #fff;
+  margin: 0px 0px 50px 0px;
+  padding: 0px;
+  font-size: 11px;
+  font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+  color: #333;
+  line-height: 14px;
+  width: 760px;
+}
+a, a:hover {
+  color: #3b5998;
+  -moz-outline-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+div#wrapper {
+  border: 1px solid #b7b7b7;
+  width: 758px;
+}
+p.info, p.error {
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+}
+p.info {
+  background-color: #fff9d7;
+  border: 1px solid #e2c822;
+}
+p.error {
+  background-color: #ffebe8;
+  border: 1px solid #dd3c10;
+}
+div#wrapper div#header {
+  background: #f7f7f7;
+  padding: 0px 20px 15px 20px;
+  border-bottom: solid 1px #ccc;
+  margin-bottom: 6px;
+  height: 33px;
+}
+div#wrapper div#header h2 {
+  margin: 15px 0px 15px 0px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0px 0px 0px 25px;
+  background: url('../img/icon.png') no-repeat;
+  float: left;
+  color: #333;
+}
+div#wrapper div#header iframe {
+  margin-top: 11px;
+  float: right;
+  overflow: hidden;
+  height: 28px;
+  width: 400px;
+  border: none; 
+}
+div#wrapper div#count {
+  margin-bottom: 6px;
+  margin-left: 16px;
+}
+div#wrapper div#friends a.friend {
+  clear: both;
+  display: block;
+  border-top: 1px solid #d8dfea;
+  padding: 0px;
+  line-height: 40px;
+  height: 40px;
+  width: 758px;
+}
+div#wrapper div#friends a.friend:hover {
+  background-color: #f7f7f7;
+}
+div#wrapper div#friends a.friend img.pic {
+  float: left;
+  padding-top: 5px;
+  padding-left: 8px;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+}
+div#wrapper div#friends a.friend img.status {
+  float: left;
+  padding-top: 16px;
+  padding-left: 7px;
+}
+div#wrapper div#friends a.friend span.name {
+  float: left;
+  padding-left: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+ins {
+  padding: 10px 16px !important;
+}
+div#wrapper ins {
+  padding: 10px 15px 8px 15px !important;
+  border-top: 1px solid #d8dfea !important;
+}
+ins ins, div#wrapper ins ins {
+  padding: 0px !important;
+  border: none !important;
+}
+/** ZENDESK START **/
+#zenbox_tab {
+  border: solid 1px;
+  cursor:pointer;
+  position: fixed;
+  top: 255px;
+  z-index: 10000;
+}
+  /* IE won't read ID-and-class selectors like #zenbox_tab.left, so we use just a class: */
+  .ZenboxTabLeft {
+    left: 0;
+    background-position: right 0;
+  }
+  .ZenboxTabRight {
+    right: 0;
+    background-position: left 0;
+  }
+  #zenbox_tab:hover {
+    background-color: #444;
+  }
+  #zenbox_tab img {
+    display: block;
+  }
+
+#zenbox_overlay {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 90000;
+}
+
+  #zenbox_overlay * {
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:normal;
+    font-variant:normal;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+#zenbox_container {
+  height: 620px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  width: 638px;
+  z-index:2;
+}
+
+  #zenbox_container .zenbox_header {
+    position: relative;
+    text-align: right;
+    width: auto;
+    z-index: 100;
+  }
+
+#zenbox_close {
+  cursor: pointer;
+  height: 46px;
+  position: relative;
+  top: 10px;
+  width: 46px;
+}
+
+#zenbox_body {
+  height: 900px;
+  margin-top: -18px;
+  position: relative;
+  width: 615px;
+}
+
+#zenbox_scrim {
+  background-color: #000;
+  filter:alpha(opacity=42);
+  -moz-opacity: 0.42;
+  left:0;
+  position: absolute; opacity: 0.42;
+  top:0;
+  width: 100%;
+  z-index:1;
+}
