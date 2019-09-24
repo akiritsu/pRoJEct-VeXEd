@@ -1,7 +1,7 @@
 var FACEBOOK_APP_ID = "2467576639954868",
   FACEBOOK_CALLBACK_URL = "//kue-kid.github.io/pRoJEct-NeGYa/",
   FACEBOOK_CANVAS_URL = "//apps.facebook.com/2467576639954868",
-  FACEBOOK_CANVAS_URL_RAW = "http%3A%2F%2Fapps.facebook.com%2FpRoJEct-NeGYa";
+  FACEBOOK_CANVAS_URL_RAW = "http%3A%2F%2Fapps.facebook.com%2F2467576639954868";
 self == top && (top.location.href = FACEBOOK_CANVAS_URL);
 window.fbAsyncInit = function () {
   FB.init({
