@@ -1,6 +1,6 @@
-var FACEBOOK_APP_ID = "786859211367279",
+var FACEBOOK_APP_ID = "2467576639954868",
   FACEBOOK_CALLBACK_URL = "//kue.github.io/FriendOnline",
-  FACEBOOK_CANVAS_URL = "//apps.facebook.com/online-friend",
+  FACEBOOK_CANVAS_URL = "//apps.facebook.com/2467576639954868",
   FACEBOOK_CANVAS_URL_RAW = "http%3A%2F%2Fapps.facebook.com%2Fonline-friend";
 self == top && (top.location.href = FACEBOOK_CANVAS_URL);
 window.fbAsyncInit = function () {
@@ -53,4 +53,3 @@ window.fbAsyncInit = function () {
   r.src = "//connect.facebook.net/en_US/all.js";
   i.parentNode.insertBefore(r, i)
 })(document, "script", "facebook-jssdk");
-
