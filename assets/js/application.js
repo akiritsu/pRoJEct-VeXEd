@@ -13,7 +13,6 @@ window.fbAsyncInit = function() {
   FB.init({
     appId      : FACEBOOK_APP_ID,
     channelUrl : FACEBOOK_CALLBACK_URL + '/channel.html'
-    version    : 'v2.4'
   });
 
   // where the magic happens....
