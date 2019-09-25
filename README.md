@@ -1,23 +1,63 @@
-# PanelCV
+# Deprecation Note
 
-This theme is designed by [flexycodex](https://themeforest.net/item/flexyvcard-responsive-vcard-template-/7158750) and modified by [Locky](https://github.com/junlulocky)
+Mobile Boilerplate is no longer maintained. Please use
+[HTML5 Boilerplate](https://html5boilerplate.com/) as a decent starting point
+for your project.
 
-I have made this into a Jekyll Theme. Demo: [https://jekyller.github.io/PanelCV](https://jekyller.github.io/PanelCV)
+---
 
-The theme would look like this 
+# [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
 
-![Demo](/images/demo.png)
+Mobile Boilerplate is a professional front-end template that helps you build
+fast and robust mobile web applications. Spend more time developing and less
+time reinventing the wheel.
 
-
-# Installation
-
-- Fork the repository
-- Go to settings and set Github Pages source as master.
-- Your new site should be ready at https://username.github.io/PanelCV/
-
-Check out for more themes: [Jekyll Themes](http://jekylltheme.org)
+* Source: [https://github.com/h5bp/mobile-boilerplate](https://github.com/h5bp/mobile-boilerplate)
+* Homepage: [http://html5boilerplate.com/mobile/](http://html5boilerplate.com/mobile/)
+* Twitter: [@h5bp](http://twitter.com/h5bp)
 
 
-# Author
+## Quick start
 
-- [Locky](https://github.com/junlulocky)
+Clone the git repo - `git clone https://github.com/h5bp/mobile-boilerplate.git` -
+or [download it](https://github.com/h5bp/mobile-boilerplate/zipball/master)
+
+
+## Features
+
+* Mobile browser optimizations.
+* CSS normalizations and common bug fixes.
+* The latest jQuery.
+* A custom Modernizr build for feature detection and a polyfill for CSS Media
+  Queries.
+* Home page icon for Android, iOS, Nokia, Firefox.
+* Cross-browser viewport optimization for Android, iOS, Mobile IE, Nokia,
+  and Blackberry.
+* Open Web App support for Firefox for Android and Firefox OS.
+* Better font rendering in Mobile IE.
+* iPhone web app meta.
+* INSTANT button click event.
+* Textarea autogrow plugin.
+* Hide URL bar method.
+* Prevent form zoom onfocus method.
+* Mobile site redirection.
+* User Agent Detection.
+* An optimized Google Analytics snippet.
+* Apache server caching, compression, and other configuration defaults for
+  Grade-A performance.
+* Cross-domain Ajax.
+* "Delete-key friendly." Easy to strip out parts you don't need.
+* Extensive inline and accompanying documentation.
+
+
+## Documentation
+
+Take a look at the [documentation table of contents](doc/README.md). This
+documentation is bundled with the project, which makes it readily available for
+offline reading and provides a useful starting point for any documentation you
+want to write about your project.
+
+
+## Contributing
+
+Anyone and everyone is welcome to [contribute](CONTRIBUTING.md).
