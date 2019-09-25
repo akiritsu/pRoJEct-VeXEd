@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <title>Animated coming soon</title>
+    <link rel="icon" href="images/fav_ico.ico" type="images/ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+ <style>
+/*Animated Waving Hand Emoji 👋 Using CSS*/
+span.wave {
+  animation-name: wave-animation;    /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;          /* Change to speed up or slow down */
+  animation-iteration-count: infinite;    /* Never stop waving :) */
+  transform-origin: 70% 70%;         /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg) }
+   10% { transform: rotate(-10.0deg) }    /* The following four values can be played with to make the waving more or less extreme */
+   20% { transform: rotate( 12.0deg) }
+   30% { transform: rotate(-10.0deg) }
+   40% { transform: rotate(  9.0deg) }
+   50% { transform: rotate(  0.0deg) }    /* Reset for the last half to pause */
+  100% { transform: rotate(  0.0deg) }
+}	 
+  </style>    
+</head>
+
+<body>
+    <div class="hidden_overflow nightmode-font nightmode_bg">
+	<div class="container">
+        <div class="count-block">
+            <div class="head-area">
+                <a href="#" class="logo mob_logo"><img src="images/logo-nightmode.svg" alt=" ERA"></a>
+                <div class="time-left-txt">Time Left Until <span class="down-op">Launching...</span></div>
+            </div>
+            <div class="middle-area">
+                <div class="countdown-row">
+                    <a href="#" class="logo"><img src="images/logo-nightmode.svg" alt=" ERA"></a
+                    ><div class="counting-row">
+                        <div class="slot-type">
+                            <span class="num" id="day">54</span>
+                            <span class="param">days</span>
+                        </div
+                        ><div class="slot-type">
+                            <span class="num" id="hour">08</span>
+                            <span class="param">hours</span>
+                        </div
+                        ><div class="slot-type">
+                            <span class="num" id="min">32</span>
+                            <span class="param">min</span>
+                        </div
+                        ><div class="slot-type">
+                            <div class="num _INVISIBLE_" id="second">02</div>
+                            <span class="param">sec</span>
+                        </div>
+                    </div>
+                    <div class="seconds-holder">
+                        <div class="circle-holder">
+                            <div class="dark_digit IE_HIDE">
+                                <img src="images/secondwhite.svg" class="round" alt="Clocks seconds">
+                            </div>
+                            <svg class="dark_digit" width="100%" height="100%">
+                                <g id="clipPath">
+                                    <image xlink:href="images/secondwhite.svg" width="100%" height="100%" transform="" class="round" id="digitalsecond" alt="Clocks seconds">
+                                        <animateTransform attributeName="transform"
+                                        attributeType="XML"
+                                        type="rotate"
+                                        dur="10s"
+                                        repeatCount="indefinite"/>
+                                    </image>
+                                </g>
+                                <defs>
+                                    <clipPath id="hero-clip">
+                                        <rect x="94%" y="47.2%" fill="#ff0000" width="110" height="64"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="down_opacity_circle">
+                                <img src="images/secondtransnightmode_.svg" class="round" id="digitalsecond" alt="Clocks seconds">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown-caption">
+                    <h2>Welcome!</h2>
+                    <p>
+                        We are happy to see you, our site is almost ready.
+                        <span class="dull-text">Please come back later and we'll surprise you!</span>
+                    </p>
+                </div>
+            </div>
+            <footer>
+                <div class="social-row">
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/creativeeradesignstudio"><i class="icon-fb"></i></a>
+                        </li><li>
+                            <a target="_blank" href="https://twitter.com/Creative_Era"><i class="icon-twitter"></i></a>
+                        </li >
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/"><i class="icon-in"></i></a>
+                        </li><li>
+                            <a target="_blank" href="https://www.youtube.com/"><i class="icon-youtube"></i></a>
+                        </li><li>
+                            <a target="_blank" href="https://www.behance.net/"><i class="icon-be"></i></a>
+                        </li><li>
+                            <a target="_blank" href="https://dribbble.com/"><i class="icon-dribbble"></i></a>
+                        </li><li>
+                            <a target="_blank" href="https://in.pinterest.com/"><i class="icon-pinterest"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="copyright-txt">
+                    © 2020 <span class="wave">👋</span>
+                </p>
+            </footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>
