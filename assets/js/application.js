@@ -92,10 +92,11 @@ window.fbAsyncInit = function() {
 };
 
 // Load the FB JS SDK asynchronously
-(function(e, t, n){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "https://connect.facebook.net/en_US/sdk.js";
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk'));
+(function(e, t, n) {
+    var r, i = e.getElementsByTagName(t)[0];
+    if (e.getElementById(n)) return;
+    r = e.createElement(t);
+    r.id = n;
+    r.src = "//connect.facebook.net/en_US/all.js";
+    i.parentNode.insertBefore(r, i)
+})(document, "script", "facebook-jssdk");
