@@ -9,7 +9,7 @@ if(self == top)
 
 // don't do ANYTHING until the FB JS SDK is completely loaded
 window.fbAsyncInit = function() {
-  
+
   FB.init({
     appId      : FACEBOOK_APP_ID,
     channelUrl : FACEBOOK_CALLBACK_URL + '/channel.html'
@@ -91,10 +91,14 @@ window.fbAsyncInit = function() {
 };
 
 // Load the FB JS SDK asynchronously
-(function(d, s, id){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "//connect.facebook.net/en_US/all.js";
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk'));
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '{your-app-id}',
+      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+    });
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});
