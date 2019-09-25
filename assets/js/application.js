@@ -13,7 +13,7 @@ window.fbAsyncInit = function() {
   FB.init({
     appId      : FACEBOOK_APP_ID,
     channelUrl : FACEBOOK_CALLBACK_URL + '/channel.html'
-    version    : 'v4.0'
+    version    : 'v2.4'
   });
 
   // where the magic happens....
@@ -92,7 +92,7 @@ window.fbAsyncInit = function() {
 };
 
 // Load the FB JS SDK asynchronously
-(function(d, s, id){
+(function(e, t, n){
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
    js = d.createElement(s); js.id = id;
