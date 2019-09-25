@@ -43,42 +43,6 @@
   </script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write(unescape('%3Cscript src="assets/js/jquery.min.js"%3E%3C/script%3E'))</script> <!-- Google CDN Fallback -->
-  <script src="assets/js/application.min.js"></script>
-  <script>
-    /* gaug.es */
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '4fd5510cf5a1f50c7b000052');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-    /* Google Analytics */
-    var _gaq = [['_setAccount', 'UA-1563964-18'], ['_setDomainName', 'none'], ['_setAllowLinker', true], ['_trackPageview']];
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    /* chartbeat */
-    var _sf_async_config = { uid: 52960, domain: 'secure.jakejarvis.com', useCanonical: true };
-    (function() {
-      function loadChartbeat() {
-        window._sf_endpt = (new Date()).getTime();
-        var e = document.createElement('script');
-        e.setAttribute('language', 'javascript');
-        e.setAttribute('type', 'text/javascript');
-        e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
-        document.body.appendChild(e);
-      };
-      var oldonload = window.onload;
-      window.onload = (typeof window.onload != 'function') ?
-        loadChartbeat : function() { oldonload(); loadChartbeat(); };
-    })();
-  </script>
+  <script src="assets/js/application.js"></script>
 </body>
 </html>
