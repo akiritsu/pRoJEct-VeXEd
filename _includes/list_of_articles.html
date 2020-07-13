@@ -1,6 +1,6 @@
 {% if page.post_list == "date" %}
 <!-- list of articles: sort by date (by default) -->
-<h1 class="loa">Post List, sorted by date</h1>
+<h1 class="loa">Post List, by Date</h1>
 <table>
     <thead>
         <tr>
@@ -21,7 +21,7 @@
 </table>
 {% elsif page.post_list == "category" %}
 <!-- list of articles: sorted by category-->
-<h1>Post List, sorted by Category</h1>
+<h1>Post List, by Category</h1>
 <table>
 {% for cate in site.categories %} 
 {% capture cate_name %}

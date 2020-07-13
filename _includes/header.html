@@ -59,7 +59,7 @@
             <!-- right header -->
             <span
                 class="span_right">
-                <!-- popup table of content -->
+                <!-- scroll up -->
                 {% if page.toc != false %}
                     <a class="header_btn" onclick="scroll_percentage(-0.88)">
                         <i class="fa fa-backward">
@@ -108,7 +108,7 @@
         {% assign toclv = 3 %}
     {% endif %}
     <!-- generate toc -->
-    {% include toc.html html=page sanitize=true class="ul_toc" id="ul_toc" h_min=1 h_max=toclv %}
+    {% include toc.html html=content sanitize=true class="ul_toc" id="ul_toc" h_min=1 h_max=toclv %}
     </div>
     <!-- toggle toc -->
     <script>
