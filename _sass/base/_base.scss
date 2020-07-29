@@ -1,0 +1,73 @@
+// global base reset
+h1 {
+  font-size: $font-size-h1;
+  text-transform: uppercase;
+  text-align: center !important;
+  font-weight: lighter;
+  margin: 32px 0px 22px 0px;
+}
+h2 {
+  font-size: $font-size-h2;
+  font-weight: lighter;
+  text-transform: capitalize;
+  border-bottom: 0.6px solid rgba($color-primary, 0.3);
+}
+h3 {
+  font-size: $font-size-h3;
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+h4 {
+  font-size: $font-size-h4;
+  font-weight: lighter;
+}
+h5 {
+  font-size: $font-size-h5;
+  font-weight: lighter;
+}
+h6 {
+  font-size: $font-size-h6;
+  font-weight: lighter;
+}
+p {
+  margin: 10px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid rgba($color-primary, 0.6);
+  margin: 0 0 0 0;
+}
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0.5px solid rgba($color-primary, 0.9);
+  background-color: rgba($color-postbg, 0.7);
+  color: $color-warning;
+  font-size: 15px;
+}
+button {
+  border: 0.8px solid rgba($color-primary, 0.9);
+  background-color: rgba($color-postbg, 0.7);
+  color: $color-primary;
+}
+// links
+a {
+  color: $color-primary;
+}
+a:link {
+  font-style: underline;
+}
+a:hover {
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+}

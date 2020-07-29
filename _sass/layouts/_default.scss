@@ -1,0 +1,142 @@
+.page {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  line-height: 1.2;
+  background-color: $color-bg;
+  background-image: $image-background;
+  font-size: $font-size-primary;
+  color: $color-primary;
+  font-family: $font-serif;
+  .container {
+    overflow: none;
+    top: 2%;
+    margin: 0 auto;
+    height: 97%;
+    width: 84%;
+    max-width: 1240px;
+    position: relative;
+    box-sizing: border-box; // interior border
+    background-color: rgba($color-postbg, 0.72);
+    .div_article {
+      top: 34px;
+      position: relative;
+      height: 95%;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 1px solid $color-primary;
+      border-top: none;
+      .post_info {
+        text-align: right;
+        padding: 0 50px;
+        font-size: $font-smaller;
+      }
+      // abstract
+      .abstract {
+        padding: 20px 20px;
+        p {
+          padding: 0 20px;
+          border-bottom: 0.6px solid rgba($color-primary, 0.3);
+        }
+      }
+      article {
+        margin: 0;
+        padding: 10px 15px 0px 15px;
+        text-align: left !important;
+        min-height: 90%;
+        // code highlight
+        pre {
+          border: 0.6px solid $color-primary;
+        }
+        // table style
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          border-spacing: 2px;
+          line-height: 1;
+          thead {
+            th {
+              padding: 10px 10px;
+              font-size: $font-bigger;
+            }
+            border-top: 1.3px solid rgba($color-primary, 0.7);
+            border-bottom: 1px solid rgba($color-primary, 0.4);
+          }
+          tbody {
+            td {
+              padding: 8px 10px;
+            }
+            border-bottom: 1.3px solid rgba($color-primary, 0.7);
+            .td_title {
+              text-transform: capitalize;
+              a:link {
+                text-decoration: none;
+              }
+              a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+              }
+            }
+            .td_date {
+              max-width: 100px;
+            }
+            .td_category {
+              max-width: 150px;
+            }
+          }
+        }
+        blockquote {
+          border-left: 2px solid $color-primary;
+        }
+        .encrypted {
+          color: rgba($color-warning, 0.9);
+          word-break: break-all;
+        }
+      }
+    }
+    // scroll bar
+    .div_article::-webkit-scrollbar {
+      width: 2px;
+    }
+    .div_article::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+    }
+  }
+}
+
+// screen max width <= 800 px
+@media screen and (max-width: 800px) {
+  .page .container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border: 1.8px solid $color-primary;
+    background-color: rgba($color-postbg, 0.7);
+    .header {
+      border: none;
+      #mxmz_btn {
+        display: none;
+      }
+    }
+    .div_article {
+      border: none;
+    }
+    .header .nav_bar ul .header_btn .btn_text {
+      font-size: 0;
+    }
+    .header .nav_bar ul {
+      .title {
+        font-size: 80%;
+      }
+      .owner {
+        font-size: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// table of content
+.popup_btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.div_toc {
+  visibility: hidden;
+  max-width: 70%;
+  width: auto;
+  background-color: rgba($color-postbg, 0.7);
+  text-align: left;
+  padding: 0px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: auto;
+  top: 32.3px;
+  right: -0.5px;
+  border: 0.7px solid rgba($color-primary, 0.6);
+  ul {
+    padding: 0 4px 0 20px;
+    li a {
+      font-size: 15px;
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+

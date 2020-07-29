@@ -1,0 +1,13 @@
+I"ê<ul id="ul_toc" class="ul_toc">
+  <li><a href="#">
+Sample Code - Quick Sort
+</a>
+    <ul>
+      <li><a href="#quick-sort-in-python">Quick sort in python</a></li>
+      <li><a href="#quick-sort-in-haskell">Quick sort in haskell</a></li>
+      <li><a href="#quick-sort-in-scheme">Quick sort in scheme</a></li>
+      <li><a href="#quick-sort-in-java">Quick sort in java</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

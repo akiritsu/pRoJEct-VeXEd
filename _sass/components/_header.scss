@@ -1,0 +1,59 @@
+.header {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 33px;
+  border: 1px solid $color-primary;
+  border-bottom: none;
+  .nav_bar {
+    text-align: left;
+    display: block;
+    list-style: none;
+    padding: 6px 12px;
+    word-wrap: none;
+    overflow: hidden;
+    white-space: nowrap;
+    ul {
+      padding: 0;
+      margin: 0;
+      font-size: $font-bigger;
+      .li_left {
+        list-style: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .span_right {
+        float: right;
+        cursor: pointer;
+        max-width: 60%;
+        .title {
+          font-weight: 450;
+        }
+        .owner {
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+.header_btn {
+  display: inline-block;
+}
+.btn_text {
+  font-style: normal;
+  margin: 0;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: $font-serif;
+  font-size: $font-smaller;
+}
+.btn_text:hover {
+  font-weight: 400;
+  text-decoration: underline;
+}
+.access_token {
+  resize: none;
+  float: right;
+  display: inline-flexbox;
+  margin: 0px 5px;
+}

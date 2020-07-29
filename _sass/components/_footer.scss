@@ -1,0 +1,22 @@
+.footer {
+    height: auto;
+    padding: 3% 0 1% 0;
+    margin: 10px 0 10px 0;
+    position: relative;
+    text-align: center;
+    .nav_bar {
+      bottom: 0;
+      margin: 0;
+      padding: 0 10px 0 10px;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          display: inline-block;
+          padding: 2px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
