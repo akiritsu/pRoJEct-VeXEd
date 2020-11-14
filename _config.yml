@@ -1,20 +1,70 @@
-## Settings
-title: pRoJEct-NeGYa
-owner: "DeerRIDER"
-url: "https://akiritsu.github.io"
-baseurl: "/pRoJEct-NeGYa"
-permalink: /:title/
-description: ""
-markdown: kramdown
+# Site Settings
+title               : pRoJEct-VeXEd
+owner               : "DeerRIDER"
+## url                : "https://akiritsu.github.io"
+## baseurl            : "/pRoJEct-VeXEd"
+permalink           : /:title/
+description         : ""
+markdown            : kramdown
+
+# Where things are
+source              : .
+destination         : ./_site
+collections_dir     : collections
+plugins_dir         : src/_plugins # takes an array of strings and loads plugins in that order
+layouts_dir         : src/_layouts
+data_dir            : src/_data
+includes_dir        : src/_includes
+sass:
+  sass_dir          : src/_sass
+
+# Collections
+collections:
+  posts:
+    output          : true
+  notes:
+    output          : true
+    permalink       : /:collection/:path/
+    sort_by         : date
+  portfolio:
+    output          : true
+    permalink       : /:collection/:path/
+    order: # specify post order manually
+      - portfolio3.md
+      - portfolio2.md
+      - portfolio1.md
+      
+# Global Variables
+email               : "akiritsu@outlook.com"
+github              : "akiritsu/pRoJEct-VeXEd"
+statement           : "Designed by DeerRIDER, All Rights Reserved"
+toc_level           : 3
+bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
+
+# Default page configuration
+defaults:
+  -
+    scope:
+      path: "_posts" # an empty string here means all files in the project
+    values:
+      layout: "post"
+  -    
+    scope:
+      path: ""
+      type: notes # file under notes
+    values:
+      layout: "post"
+      tags: n0t3s
+      author: aaa
+  -    
+    scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: "post"
+      tags: pfl
+
+# Cross-Origin Resource Sharing header
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
-## Global Variables
-email: "akiritsu@outlook.com"
-github: "akiritsu/pRoJEct-NeGYa"
-
-statement: "Designed by DeerRIDER, All Rights Reserved"
-# default max toc levels: 1 - 6 (h1 - h6)
-toc_level: 3
-# texts randomly displayed in background
-bgtext: "αβγδεζηθικλμνξοπρστυφχψω∷∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌√"

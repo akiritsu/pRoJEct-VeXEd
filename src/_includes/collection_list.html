@@ -1,0 +1,54 @@
+<div class="collection_list" id="the_collection_list">
+  <div class="collection_list_header">
+    <a class="search_btn">
+      <i class="fa fa-search"> Search</i>
+    </a>
+    &nbsp;
+    <a class="close_btn" onclick="close_collection_list()">
+      <i class="fa fa-times-circle-o"> Close</i>
+    </a>
+  </div>
+  <div class="collection_name_list">
+    <table class="vertical_center_table">
+      <tr>
+        <td>
+          <ul>
+            {% for collection in site.collections %}
+            <li>
+              <a
+                class="a_collection_label"
+                onclick="show_collection('{{collection.label}}')"
+              >
+                {{collection.label}}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="posts_by_cate">
+    {% for collection in site.collections %}
+    <div class="post_list_in_1_collection" id="{{collection.label}}">
+    <table class="vertical_center_table">
+      <tr>
+        <td>
+          <ul >
+            {% for post in collection.docs %}
+            <li>
+              <a
+                class="a_title"
+                href="{{site.url}}/{{site.baseurl}}/{{post.url}}"
+                >{{post.title}}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </table>
+</div>
+    {% endfor %}
+  </div>
+</div>

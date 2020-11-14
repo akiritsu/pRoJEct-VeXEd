@@ -1,0 +1,13 @@
+.post_info {
+  text-align: right;
+  padding: 0 50px;
+  font-size: $font-smaller;
+  margin: 0;
+}
+.abstract {
+  padding: 20px 20px;
+  p {
+    padding: 0 20px;
+    border-bottom: 0.6px solid rgba($color-primary, 0.3);
+  }
+}

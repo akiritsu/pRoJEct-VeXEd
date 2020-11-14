@@ -1,0 +1,37 @@
+// table of content
+.popup_btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.div_toc {
+  position: absolute;
+  bottom: auto;
+  top: 33.5px;
+  right: -0.5px;  
+  z-index: 2;
+  max-width: 70%;
+  max-height: 80%;
+  width: auto;
+  overflow-x: hidden;
+  @include thin_scrollbar;
+  visibility: hidden;
+  background-color: rgba($color-postbg, 0.7);
+  text-align: left;
+  padding: 0px 0;
+  border: 0.7px solid rgba($color-primary, 0.6);
+  ul {
+    padding: 0 4px 0 20px;
+    li a {
+      font-size: 15px;
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+

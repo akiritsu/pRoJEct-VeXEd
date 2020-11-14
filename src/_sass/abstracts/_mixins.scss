@@ -1,0 +1,20 @@
+@mixin thin_scrollbar {
+  &::-webkit-scrollbar {
+    width: 2.4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+  }
+}
+@mixin simple_link_style {
+  &:link {
+    font-style: normal;
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+    font-weight: normal;
+    color: $color-secondary;
+    cursor: pointer;
+  }  
+}

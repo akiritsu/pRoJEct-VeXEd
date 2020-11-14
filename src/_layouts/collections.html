@@ -1,0 +1,22 @@
+---
+layout: default
+post_list: false
+home_btn: true
+btn_text: true
+footer: false
+title: "Collection List"
+author: ""
+encrypted_text: false
+---
+<div class="collection_list">
+<h1>Collections</h1>
+{% for collection in site.collections %}
+    <h2>{{collection.label}}</h2>
+    {% for post in collection.docs %}
+        <p>
+            &nbsp;&nbsp;
+            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>  
+        </p>
+    {% endfor %}
+{% endfor %}
+</div>
