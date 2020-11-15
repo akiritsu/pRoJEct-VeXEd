@@ -6,6 +6,7 @@ function toggle_toc() {
 // open collection list -> header.html -> .collection_list
 function open_collection_list() {
     document.getElementById("the_collection_list").classList.add("show");
+    document.getElementById("all").classList.add("show");
 }
 // close collection list -> collections.html -> .collection_list
 function close_collection_list() {

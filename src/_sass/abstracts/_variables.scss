@@ -5,31 +5,27 @@ $color-warning: rgb(238, 27, 27);
 $color-bg: rgb(0, 0, 0);
 $color-postbg: rgb(0, 0, 0);
 $image-background: none;
-
-// font family
-$font-serif: Georgia, Times, serif, "Source-Han-Sans-Medium", "PingFang SC",
-  "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei" !default;
-$font-sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif, "Source-Han-Sans-Medium",
-  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
-  "WenQuanYi Micro Hei" !default;
-$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-$font-monospace: "Fira Code", "Source Code Pro", "Fira Code Online", Monaco,
-  Consolas, "Lucida Console", monospace !default;
-
 // font size
 $font-size-h1: 23px;
 $font-size-h2: 21px;
 $font-size-h3: 20px;
 $font-size-h4: 19px;
 $font-size-h5: 18px;
-$font-size-h6: 17px;
-$font-size-primary: 16.5px;
+$font-size-h6: 17.2px;
+$font-size-primary: 16.8px;
 $font-smaller: 93%;
 $font-bigger: 108%;
 $blk-duration: 1.2s;
 $blk-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
-
+// layout reset
+$header-height: 37px;
+$header-btn-size: 18.9px;
+$toc-position: $header-height + 1px;
+// standard border
+$thick-border: 2px solid $color-primary;
+$secondary-border: 1.3px solid rgba($color-primary, 0.85);
+$medium-border: 1px solid rgba($color-primary, 0.73);
+$thin-border: 0.7px solid rgba($color-primary, 0.4);
 // syntax highlight
 $code-primary: #23ad35;
 $code-background: rgb(17, 15, 15);

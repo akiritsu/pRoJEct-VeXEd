@@ -2,12 +2,12 @@
 // list of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
 
 .highlight {
+  overflow: hidden;
   word-wrap: break-word;
   color: $code-primary;
-  background-color: $code-background;
   font-family: $font-monospace;
   font-size: $font-smaller;
-  padding: 3px;
+  padding: 5px 5px 7px 5px;
   .w /* specially highlighted whitespace */ {
     color: rgba($code-background, 0.6);
   }
@@ -191,7 +191,7 @@
         padding-right: 1em;
         width: 1em;
         color: $code-primary;
-        border-right: 1px solid $code-primary;
+        border-right: $medium-border;
         text-align: right;
       }
       /* code */
@@ -205,7 +205,10 @@
     }
   }
 .highlight pre {
-    width: 100%;
+  background-color: $code-background;  
+  overflow-x: auto;
+  @include thin_scrollbar; 
+    width: 99%;
   }
 .highlight .hll {
     background-color: $code-background;

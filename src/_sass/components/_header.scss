@@ -2,21 +2,36 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  height: 33.4px;
-  border: 1px solid $color-primary;
-  border-bottom: none;
-  .nav_bar { 
+  height: auto;
+  z-index: 3;
+  border: $secondary-border;
+  border-bottom: $medium-border;
+  .vertical_center_table {
+    width: 100%;
+    height: $header-height; // the real height of header
+  }
+  tbody{
+    border: none;  
+  }
+  td {
+    border: none;
+    padding: 0;
+    vertical-align: middle; 
+  }
+  li {
+    width: auto;
+  }
+  .nav_bar {
     text-align: left;
     display: block;
     list-style: none;
-    padding: 6px 12px;
+    padding: 0px 12px;
     word-wrap: none;
     overflow: hidden;
     white-space: nowrap;
     ul {
       padding: 0;
       margin: 0;
-      font-size: $font-bigger;
       .li_left {
         list-style: none;
         display: inline-block;
@@ -36,9 +51,10 @@
     }
   }
   .header_btn {
+    font-size: $header_btn_size;
     display: inline-block;
     i {
-      @include simple_link_style;  
+      @include simple_link_style;
     }
   }
   .btn_text {
@@ -56,8 +72,32 @@
   .access_token {
     resize: none;
     float: right;
+    width: 5.5em;
     display: inline-flexbox;
     margin: 0px 5px;
   }
 }
-
+// screen auto-adjustment
+@media screen and (max-width: 950px) {
+  .page .header .nav_bar ul .header_btn .btn_text {
+    font-size: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .page .container .header {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    #mxmz_btn {
+      display: none;
+    }
+  }
+  .page .container .header .nav_bar ul {
+    .title {
+      font-size: 80%;
+    }
+    .owner {
+      font-size: 0;
+    }
+  }
+}

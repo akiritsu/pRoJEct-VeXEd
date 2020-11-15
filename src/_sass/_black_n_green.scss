@@ -1,20 +1,15 @@
 @charset 'utf-8';
 
-
-
-// Abstracts
+// abstracts
 @import "abstracts/fonts";
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/animations";
-
-// Vendor
+// vendor
 @import "vendor/syntax";
-
-// Base Styles
+// base styles
 @import "base/base";
-
-// Components
+// components
 @import "components/footer";
 @import "components/collection_list";
 @import "components/background";
@@ -22,6 +17,6 @@
 @import "components/post_info";
 @import "components/post_list";
 @import "components/toc";
-
-// Layout
+// layout
 @import "layouts/default";
+

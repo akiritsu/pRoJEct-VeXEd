@@ -2,7 +2,7 @@
 
 黑客帝国掉字母儿风格的个人主页模板。
 
-版本： v2.1
+版本： v2.2
 
 ## 特性
 
@@ -15,13 +15,13 @@
 
 ## 更新日志
 
-TODO: 重置markdown文章配色
+TODO: 增加搜索文章功能
+
+2020.11.16： v2.2 完善基础样式
 
 2020.11.12: v2.1 增加collection功能
 
 2020.7.24: v2.0 修改工程结构，优化scss文件结构
-
-2019.7.17：更新说明文件
 
 2019.6.15：v1.0 正式版
 
@@ -31,7 +31,7 @@ TODO: 重置markdown文章配色
 * 修改_config.yml文件
 * （自定义域名）修改CNAME文件
 * 修改pages/index.md文件，自定义主页
-* 删除_posts/文件夹里的文件，添加自己的文章
+* 删除collections/_posts/文件夹里的文件，添加自己的文章
 * 同步到github远程仓库
 * 将加密内容作为加密文本的id
   * 可使用在线工具加密文本：[sjcl官方](http://bitwiseshiftleft.github.io/sjcl/demo/)  [bcqlr.com](http://bcqlr.com/sjcl/)
