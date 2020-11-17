@@ -44,9 +44,8 @@
           <td>
             <ul>
               {% for collection in site.collections %}
-              <h2>{{collection.label}}</h2>
+              <h2 class="h_collection_label">{{collection.label}}</h2>
               {% for post in collection.docs %}
-
               <li>
                 <a
                   class="a_title"

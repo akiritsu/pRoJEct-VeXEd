@@ -39,9 +39,20 @@ collections:
     permalink       : /:collection/:title/
     sort_by         : date
       
+# Social Media Accounts
+email               : "just-test" 
+linkedin            : 
+github              : "just-test" 
+gitlab              : 
+website             : 
+twitter             : "just-test"
+facebook            : "just-test"
+instagram           : 
+youtube             : "just-test"
+steam               : "just-test"
+weibo               : "just-test"
+
 # Global Variables
-email               : "akiritsu@outlook.com"
-github              : "akiritsu/pRoJEct-VeXEd"
 statement           : "Designed by DeerRIDER, All Rights Reserved"
 toc_level           : 3
 bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background

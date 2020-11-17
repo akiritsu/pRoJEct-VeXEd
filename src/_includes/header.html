@@ -9,7 +9,7 @@
               <!-- open collection tree -->
               {% if page.collection_list != false %}
               <a class="header_btn" onclick="open_collection_list()">
-                <i class="fa fa-bars">
+                <i class="fa btn_icon fa-bars">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Archives</p>
                   {% endif %}
@@ -19,29 +19,9 @@
               <!-- home -->
               {% if page.home_btn != false %}
               <a class="header_btn" href="{{ site.url }}{{ site.baseurl }}">
-                <i class="fa fa-home">
+                <i class="fa btn_icon fa-home">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Home</p>
-                  {% endif %}
-                </i>
-              </a>
-              {% endif %}
-              <!-- email -->
-              {% if site.email != ""%}
-              <a class="header_btn" href="mailto://{{ site.email }}">
-                <i class="fa fa-envelope-square">
-                  {% if page.btn_text != false %}
-                  <p class="btn_text">Email</p>
-                  {% endif %}
-                </i>
-              </a>
-              {% endif %}
-              <!-- github -->
-              {% if site.github != "" %}
-              <a class="header_btn" href="https://github.com/{{ site.github }}">
-                <i class="fa fa-github">
-                  {% if page.btn_text != false %}
-                  <p class="btn_text">Github</p>
                   {% endif %}
                 </i>
               </a>
@@ -49,7 +29,7 @@
               <!-- maximize -->
               {% if page.maximize != false %}
               <a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">
-                <i class="fa fa-window-maximize">
+                <i class="fa btn_icon fa-window-maximize">
                   {% if page.btn_text != false %}
                   <p class="btn_text" id="mxmz_text">Maximize</p>
                   {% endif %}
@@ -59,7 +39,7 @@
               <!-- access token -->
               {% if page.encrypted_text == true %}
               <a class="header_btn" id="acs_btn" onclick="apply_token()">
-                <i class="fa fa-key">
+                <i class="fa btn_icon fa-key">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Token</p>
                   {% endif %}
@@ -78,7 +58,7 @@
               {% if page.toc != false %}
               <!-- scroll up -->
               <a class="header_btn" onclick="scroll_percentage(-0.88)">
-                <i class="fa fa-backward">
+                <i class="fa btn_icon fa-backward">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Prev</p>
                   {% endif %}
@@ -86,7 +66,7 @@
               </a>
               <!-- scroll down -->
               <a class="header_btn" onclick="scroll_percentage(0.88)">
-                <i class="fa fa-forward">
+                <i class="fa btn_icon fa-forward">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Next</p>
                   {% endif %}
@@ -94,16 +74,20 @@
               </a>
               <!-- popup table of content -->
               <a class="header_btn popup_btn" onclick="toggle_toc()">
-                <i class="fa fa-list">
+                <i class="fa btn_icon fa-list">
                   {% if page.btn_text != false %}
                   <p class="btn_text">Content</p>
                   {% endif %}
                 </i>
               </a>
-              {% else site.title %}
-              <a class="title">{{ site.title }}</a>
-              {% if site.owner != ""%}
-              <a class="owner"> - {{ site.owner }}</a>
+              {% else %}
+              <a class="site_title" href="{{site.url}}{{site.baseurl}}"
+                >{{ site.title }}</a
+              >
+              {% if site.owner != false%} -
+              <a class="site_owner" href="https://github.com/{{site.github}}">
+                {{ site.owner }}</a
+              >
               {% endif %} {% endif %}
             </span>
           </ul>

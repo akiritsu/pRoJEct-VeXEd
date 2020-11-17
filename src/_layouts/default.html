@@ -11,7 +11,7 @@
           {{content}}
           {% include post_list.html %}
         </article>
-          {% if page.footer == true %}
+          {% if page.footer != false %}
           {% include footer.html %}
           {% endif %}
       </div>

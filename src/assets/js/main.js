@@ -36,19 +36,19 @@ function scroll_percentage(mtpler) {
 // toggle entire page -> header.html -> #mxmz_btn
 function toggle_maximize() {
     if (ctner_state == 0) {
+        ctner.style.top = "0";    
         ctner.style.width = "100%";
         ctner.style.height = "100%";
-        ctner.style.top = "0";
         ctner.style.maxWidth = "100%";
         if (document.getElementById("mxmz_text")) {
             document.getElementById("mxmz_text").innerHTML = "Restore";
         }
         ctner_state = 1;
     } else if (ctner_state == 1) {
+        ctner.style.top = "2%";    
         ctner.style.width = "84%";
         ctner.style.height = "97%";
-        ctner.style.top = "2%";
-        ctner.style.maxWidth = "1240px";
+        ctner.style.maxWidth = "1350px";
         if (document.getElementById("mxmz_text")) {
             document.getElementById("mxmz_text").innerHTML = "Maximize";
         }
