@@ -1,3 +1,5 @@
+<!-- collection list, shown by click "archive" buttom in header -->
+
 <div class="collection_list" id="the_collection_list">
   <div class="collection_list_header">
     <!-- TODO: search post -->
@@ -5,9 +7,17 @@
       <i class="fa fa-search"> Search</i>
     </a>
     &nbsp; -->
-    <a class="close_btn" onclick="close_collection_list()">
-      <i class="fa fa-times-circle-o"> Close</i>
-    </a>
+    <table class="collection_list_header_title">
+      <tr>
+        <td>Archive:</td>
+        <td id="clh_title"></td>
+      </tr>
+    </table>
+    <div class="close_btn" onclick="close_collection_list()">
+      <a class="close_btn_icon">
+        <i class="fa fa-times"></i>
+      </a>
+    </div>
   </div>
   <div class="collection_name_list">
     <table class="vertical_center_table">
@@ -17,7 +27,7 @@
             <!-- show all collections -->
             <li>
               <a class="a_collection_label" onclick="show_collection('all')"
-                >ALL
+                >All
               </a>
             </li>
             <!-- show a simple collection -->
@@ -44,7 +54,7 @@
           <td>
             <ul>
               {% for collection in site.collections %}
-              <h2 class="h_collection_label">{{collection.label}}</h2>
+              <p class="h_collection_label">{{collection.label}}</p>
               {% for post in collection.docs %}
               <li>
                 <a

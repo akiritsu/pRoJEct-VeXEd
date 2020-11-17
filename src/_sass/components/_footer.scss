@@ -19,11 +19,11 @@
     }
   }
   .footer_owner_info {
-    font-size: $font-smaller;
+    font-size: $footer-icon-size;
     margin: 0 0 10px 0;
     padding: 0;
     p {
-      font-size: 89%;
+      font-size: $footer-text-size;
       margin: 0 0.5em 0 0.05em;
       display: inline;
       font-family: $font-serif;

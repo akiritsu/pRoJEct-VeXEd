@@ -79,12 +79,14 @@ a:hover {
 }
 img {
   max-width: 100%;
+  margin: 0 auto; // image center align
+  display: block; // image center align
 }
 ol {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 1.6em;
 }
 ul {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 1.6em;
 }
 blockquote {
   margin: 1em 30px 0.8em 35px;
@@ -120,19 +122,20 @@ table {
   }
 }
 code {
-  font-family: $font-monospace;  
+  font-family: $font-monospace;
 }
 // markdown style reset
 article .language-plaintext {
   font-size: 90%;
   color: $color-secondary;
-  text-shadow: -0.5px -0.5px 0 rgb(194, 202, 157),0.5px 0.5px 0 #333,0.5px 0.5px 0 #444;
+  text-shadow: -0.5px -0.5px 0 rgb(194, 202, 157), 0.5px 0.5px 0 #333,
+    0.5px 0.5px 0 #444;
 }
 article {
   a {
-  padding: 0 0.3em;
-}  
-a:hover{
-  font-weight: bold;
-}
+    padding: 0 0.3em;
+  }
+  a:hover {
+    font-weight: bold;
+  }
 }

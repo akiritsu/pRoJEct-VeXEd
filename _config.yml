@@ -4,7 +4,7 @@ owner               : "DeerRIDER"
 ## url                : "https://akiritsu.github.io"
 ## baseurl            : "/pRoJEct-VeXEd"
 permalink           : /:title/
-description         : ""
+description         : "A hacker-style note-keeping website template."
 markdown            : kramdown
 
 # Where things are
@@ -80,6 +80,12 @@ defaults:
       layout: "post"
       tags: pfl
 
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  
 # Cross-Origin Resource Sharing header
 webrick:
   headers:

@@ -12,18 +12,47 @@
   background-color: rgba($color-postbg, 0.9);
   border: $secondary-border;
   .collection_list_header {
-    text-align: right;
-    padding: 5px 10px;
+    height: $collection-list-header-size;
+    text-align: left;
+    padding: 0;
+    border-bottom: $secondary-border;
+    .collection_list_header_title {
+      height: auto;
+      width: auto;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: $collection-list-header-size * 0.65;
+      border: 0;
+      td {
+        height: $collection-list-header-size;
+        padding: 0 0 0 0.4em;
+        vertical-align: middle; 
+      }
+      #clh_title {
+        text-transform: capitalize;  
+      }
+    }
     .close_btn {
+      height: $collection-list-header-size;
+      width: $collection-list-header-size;
+      right: 0;
+      display: inline-block;
+      position: absolute; 
+      text-align: center;
       color: $color-warning !important;
+      border-left: $secondary-border;
       @include simple_link_style;
+    }
+    .close_btn_icon {
+      font-size: $collection-list-header-size * 0.8;
     }
     .search_btn {
         color: $color-warning !important;    
     }
   }
   .collection_name_list {
-    top: 28px;
+    top: 28px + $collection-list-header-size;
     bottom: 28px;
     width: 25%;
     height: auto;
@@ -37,7 +66,7 @@
     }
     ul {
       margin: 0;
-      padding: 10px 10px 10px 26px;
+      padding: 0px 10px 0px 26px;
       text-align: left;
     }
     li {
@@ -45,7 +74,7 @@
     }
   }
   .posts_by_cate {
-    top: 28px;
+    top: 28px + $collection-list-header-size;
     bottom: 28px;
     left: 25%;
     right: 0;
@@ -55,9 +84,16 @@
     padding: 0 0 0 14px;
     overflow-x: hidden;
     overflow-y: hidden;
-    // @include thin_scrollbar;
     text-align: left;
     border-left: $thin-border;
+    td {
+      padding: 0;
+    }
+    ul {
+      margin: 0;
+      padding: 0px 2.2em 0px 2.2em;
+      text-align: left;
+    }
     li {
       list-style-type: disc;
     }
@@ -81,11 +117,9 @@
     max-height: 100%;
     top: 0;
     bottom: 0;
+    vertical-align: middle; 
     tbody {
       border: none;
-    }
-    td {
-      vertical-align: middle; 
     }
     li {
       width: auto;
@@ -94,8 +128,8 @@
   // left part
   .a_collection_label { 
     padding: 0;
-    font-size: $font-size-h1;
-    line-height: 150%;
+    font-size: $font-size-h3;
+    line-height: 160%;
     text-transform: capitalize;
     padding: 5px 0;
     @include simple_link_style;
@@ -103,12 +137,15 @@
   // right part
   .a_title { 
     padding: 0;
-    font-size: $font-size-h4;
-    line-height: 135%;
+    font-size: $font-size-h6;
+    line-height: 150%;
     @include simple_link_style;
   }
   // labels of "all" collections in right part
   .h_collection_label { 
+    margin: 0 0 0.5em 0;
+    font-size: $font-size-h6;    
     text-transform: capitalize;
+    border-bottom: $thin-border;
   }
 }

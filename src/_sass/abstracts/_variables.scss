@@ -1,10 +1,11 @@
 // global variables
-$color-primary: rgb(52, 165, 7);
-$color-secondary: rgb(223, 217, 132);
-$color-warning: rgb(238, 27, 27);
-$color-bg: rgb(0, 0, 0);
+$color-primary: rgb(34, 230, 8);
+$color-secondary: rgb(255, 247, 141);
+$color-warning: rgb(233, 32, 32);
+$color-bg: rgb(19, 14, 14);
 $color-postbg: rgb(0, 0, 0);
 $image-background: none;
+
 // font size
 $font-size-h1: 23px;
 $font-size-h2: 21px;
@@ -17,29 +18,35 @@ $font-smaller: 90%;
 $font-bigger: 108%;
 $blk-duration: 1.2s;
 $blk-timing-function: cubic-bezier(0.98, -0.23, 0.65, 0.7);
+
 // layout reset
 $header-height: 37px;
-$header-btn-text-size: 17px;
-$header-btn-icon-size: 18.5px;
+$header-btn-icon-size: 17px;
+$header-btn-text-size: $header-btn-icon-size * 0.95;
 $toc-position: $header-height + 1px;
+$footer-icon-size: 14px;
+$footer-text-size: $footer-icon-size * 0.9;
+$collection-list-header-size: 30px;
+
 // standard border
 $thick-border: 2px solid $color-primary;
 $secondary-border: 1.3px solid rgba($color-primary, 0.87);
 $medium-border: 0.9px solid rgba($color-primary, 0.83);
 $thin-border: 0.5px solid rgba($color-primary, 0.6);
+
 // syntax highlight
-$code-primary: #23ad35;
-$code-background: rgb(17, 15, 15);
+$code-primary: $color-primary;
 $comment: $color-secondary;
-$keyword: #1fdfc5;
-$number: #7838ee;
-$type: rgb(207, 138, 59);
-$variable: #d44639;
-$string: rgb(235, 146, 63);
-$punctuation: #4fa5ce;
-$namespace: #660752;
-$class: #861aa1;
-$built-in: #665454;
-$global: #19e445;
-$error: #a50d0d;
+$keyword: #8a31ff;
+$type: rgb(195, 233, 25);
+$variable: #e24637;
+$number: #66faff;
+$string: rgb(230, 126, 29);
+$punctuation: #52acf7;
+$namespace: #8a076d;
+$class: #c43144;
+$built-in: #9e7c7c;
+$global: #52c96c;
+$error: $color-warning;
+$code-background: rgb(19, 16, 16);
 $error-background: #250f0f;

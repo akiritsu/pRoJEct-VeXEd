@@ -6,7 +6,7 @@ function toggle_toc() {
 // open collection list -> header.html -> .collection_list
 function open_collection_list() {
     document.getElementById("the_collection_list").classList.add("show");
-    document.getElementById("all").classList.add("show");
+    show_collection("all");
 }
 // close collection list -> collections.html -> .collection_list
 function close_collection_list() {
@@ -24,6 +24,7 @@ function show_collection(col_name) {
         collection_labels[idx].classList.remove("show");
     }
     document.getElementById(col_name).classList.add("show");
+    document.getElementById("clh_title").innerHTML = col_name;
 }
 
 //scroll page -> header.html -> .span_right prev & next btn
