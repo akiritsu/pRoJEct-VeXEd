@@ -20,7 +20,7 @@
   background-color: rgba($color-postbg, 0.72);
 }
 .div_article {
-  top: $header-height;
+  top: $header-height + 1px;
   height: 95%;
   width: 100%;
   position: relative;

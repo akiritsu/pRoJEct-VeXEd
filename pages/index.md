@@ -1,7 +1,8 @@
 ---
 layout: default
-post_list: "date"
+post_list: false
 toc: false
+comment: false
 home_btn: true
 btn_text: true
 footer: true
@@ -14,27 +15,43 @@ permalink: /
 # PROJECT VeXEd - HACKER-STYLE PERSONAL HOMEPAGE
 
 ##  Features
-* Highly customizable, content-oriented with The Matrix style
-* Eyesight-protection layout
-* Decrypt and encrypt text (access token: 233): 
-  * secret msg 1: 
-  <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Encrypted content!</p>
-  * secret msg 2: 
-  <p class="encrypted" id="G7D+0370pNmixIP1j7teCg1jtm9XCdOWYFH61lcM0LYWlT0hB3rS9raIs=">Encrypted content!</p>
-* LaTeX formula Support with MathJax
-
+* Highly customizable with user-friendly hacker-like design.
+* Easy to gather your notes or portfolios with multiple collection design.
+* Supports formula insertion by `MathJax`.
+<div style="color: rgb(233, 32, 32)">
 $$
 NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!
 $$
+</div>
+* Supports code highlight by `Rouge`.
 
-* Code highlight with Rouge
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+```python
+# Function to do Quick sort 
+def quickSort(arr,low,high): 
+    if low < high: 
+  
+        # pi is partitioning index, arr[p] is now 
+        # at right place 
+        pi = partition(arr,low,high) 
+  
+        # Separately sort elements before 
+        # partition and after partition 
+        quickSort(arr, low, pi-1) 
+        quickSort(arr, pi+1, high) 
+  
+# Driver code to test above 
+arr = [10, 7, 8, 9, 1, 5] 
+n = len(arr) 
+quickSort(arr,0,n-1) 
+print ("Sorted array is:") 
+for i in range(n): 
+    print ("%d" %arr[i]), 
 ```
+
+* Decrypt and encrypt text (access token: 233): 
+  * secret msg 1: 
+  <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Encrypted content!</p>
+
 ## Download and Documentation
 
 [**pRoJEct VeXEd (Github)**](https://github.com/akiritsu/pRoJEct-VeXEd)
