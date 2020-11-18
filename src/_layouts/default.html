@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body class="page">
+  <body class="page" onresize="setInterval(draw, 20);">
     {% include background.html %}
     <div class="container" id="ctner">
       {% include collection_list.html %}  
