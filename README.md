@@ -11,12 +11,11 @@
     <img src="src/assets/img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">pRoJEct-VeXEd v2.3</h3>
-
+  <h3 align="center">pRoJEct-VeXEd</h3>
+    <h5  align="center">v 2.3<h5
+    <br />
   <p align="center">
     pRoJEct-NeGYa is a hacker-like, highly-customizable theme for note-keeping, personal-website or CV.
-    <br />
-    <br />
     <br />
     <br />
     <a href="https://akiritsu.github.io/pRoJEct-VeXEd/">View Demo</a>
