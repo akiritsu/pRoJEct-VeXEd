@@ -57,7 +57,7 @@ statement           : "Designed by DeerRIDER, All Rights Reserved"
 toc_level           : 3
 bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
 # Disqus settings（disqus.com）
-disqus_username     : akritsu
+disqus_username     : akiritsu
 
 # Default page configuration
 defaults:
