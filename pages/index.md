@@ -14,16 +14,20 @@ permalink: /
 
 # PROJECT VeXEd - HACKER-STYLE PERSONAL HOMEPAGE
 
+<br>
+> pRoJEct-NeGYa is a hacker-like, highly-customizable theme for note-keeping, personal-website or CV.
+
+
 ##  Features
 * Highly customizable with user-friendly hacker-like design.
 * Easy to gather your notes or portfolios with multiple collection design.
-* Supports formula insertion by `MathJax`.
+* Supports formula insertion with `MathJax`.
 <div style="color: rgb(233, 32, 32)">
 $$
 NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!
 $$
 </div>
-* Supports code highlight by `Rouge`.
+* Supports code highlight with `Rouge`.
 
 ```python
 # Function to do Quick sort 
@@ -49,14 +53,47 @@ for i in range(n):
 ```
 
 * Decrypt and encrypt text (access token: 233): 
-  * secret msg 1: 
+  * secret msg example: 
   <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Encrypted content!</p>
 
 ## Download and Documentation
 
-[**pRoJEct VeXEd (Github)**](https://github.com/akiritsu/pRoJEct-VeXEd)
+[**pRoJEct VeXEd README (Github)**](https://github.com/akiritsu/pRoJEct-VeXEd)
+
+[Download .zip files](https://codeload.github.com/akiritsu/pRoJEct-VeXEd/zip/master)
+
+[中文自述及使用教程](https://akiritsu.github.io/pRoJEct-VeXEd/posts/readme/)
 
 ## More Samples
+
+### Font style and link
+* normal
+* **bold**
+* *italic*
+* ~~strikethrough~~
+* `keyword`
+* [Link to Google](www.google.com)
+
+### List
+1. ordered list item 1
+2. ordered list item 2
+   1. sublist
+   2. sublist 2
+      1. subsublist
+         
+* unordered list 
+* unordered list
+  * sublist
+
+### Table
+
+| Date         | Version   | Size    | Comment                |
+| :----------- | :-------- | :------ | :--------------------- |
+| Nov 11, 2018 | v2.14c    | 240 kb  | No irreversible damage |
+| Nov 12, 2018 | v2.14c    | 1230 kb | No irreversible damage |
+| Nov 13, 2018 | v2.14c    | 12kb    | No irreversible damage |
+| Nov 15, 2018 | v1.99 LTS | 4kb     | Irreversible damage    |
+
 
 ### More Texts
 

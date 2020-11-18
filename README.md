@@ -1,60 +1,230 @@
-# PRoJEct-VeXEd
 
-黑客帝国掉字母儿风格的个人主页模板。
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-版本： v2.2
+<!-- LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/akiritsu/pRoJEct-VeXEd">
+    <img src="src/assets/img/favicon.png" alt="Logo" width="80" height="80">
+  </a>
 
-## 特性
+  <h3 align="center">pRoJEct-VeXEd v2.3</h3>
 
-1. 狂拽酷炫
-2. 代码高亮
-3. MathJax公式
-4. 文章索引
-5. 高度可定制化
-6. 加密内容
+  <p align="center">
+    pRoJEct-NeGYa is a hacker-like, highly-customizable theme for note-keeping, personal-website or CV.
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="https://akiritsu.github.io/pRoJEct-VeXEd/">View Demo</a>
+    ·
+    <a href="https://akiritsu.github.io/pRoJEct-VeXEd/issues">Report Bug</a>
+    ·
+    <a href="https://akiritsu.github.io/pRoJEct-VeXEd/issues">Request Feature</a>
+  </p>
+</p>
 
-## 更新日志
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-TODO: 增加搜索文章功能
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Features](#features)
+  - [Builtwith](#builtwith)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Personalize and Customize](#personalize-and-customize)
+    - [_config.yml](#_configyml)
+    - [Collections](#collections)
+    - [Writing](#writing)
+    - [Comment](#comment)
+    - [Test locally](#test-locally)
+    - [Front Matter](#front-matter)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-2020.11.16： v2.2 完善基础样式
 
-2020.11.12: v2.1 增加collection功能
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-2020.7.24: v2.0 修改工程结构，优化scss文件结构
+![homepage](src/assets/img/Screenshot-1.png)
 
-2019.6.15：v1.0 正式版
+This jekyll theme is a content-oriented blog, cv or learning notes, aimed at providing a convinient note-keeping tool. You can keep and review your notes or articles in different collections without any functional recode.
 
-## 使用方法
+### Features
 
-* 下载或者fork到自己的github仓库里
-* 修改_config.yml文件
-* （自定义域名）修改CNAME文件
-* 修改pages/index.md文件，自定义主页
-* 删除collections/_posts/文件夹里的文件，添加自己的文章
-* 同步到github远程仓库
-* 将加密内容作为加密文本的id
-  * 可使用在线工具加密文本：[sjcl官方](http://bitwiseshiftleft.github.io/sjcl/demo/)  [bcqlr.com](http://bcqlr.com/sjcl/)
+* Highly customizable
+* Formula insertion
+* Code test online
+* Easy-to-use cheatsheet
+* Hacker-like theme
+* Code highlight
+* Text Decryption
+* Convinient code exhibition and review
+* Table of content
+* Atom Feeds
+* SEO
 
-## 工程结构
+### Builtwith
 
-* src/：工程源码及文件
-  * _includes/：子页面模块
-  * _layouts/：页面模板（单纯地组合子页面模块）
-  * _sass/：分类的scss样式表文件
-  * assets/css/：样式表文件
-  * assets/fonts/：字体文件
-  * assets/js/：javsscript 脚本文件
-  * assets/img/：图片
-* collections/：文章集合
-  * _post/：主要文章集合
-  * .../：自定义文章集合
-* pages/：主要页面
-  * index.md：网站主页
-  * 404.md：404页面
-  * collections.md：所有文章索引
-* config.yml：网站配置文件
-* .gitignore：Git过滤规则文件
-* LICENSE：工程开源协议
-* README.md：工程自述文件
+* Bundler
+* Jekyll
+* Mathpix
+* Font Awesome
+* Sjcl
+* Disqus
 
+## Getting Started
+
+### Prerequisites
+* rubygems
+
+The installation of gem is depend on your operating system. Alternatively, you can download Gem through browser: [Ruby](https://www.ruby-lang.org/en/downloads/), and install rubygems manually.
+
+```bash
+# macOS
+
+brew update
+brew install ruby
+
+# Ubuntu
+sudo apt-get install ruby
+
+# Arch
+sudo pacman -S ruby
+
+```
+
+* bundler
+
+```bash
+gem install bundler
+```
+* jekyll
+```bash
+bundler install jekyll
+```
+
+### Installation
+
+1. Fork this project on [github](https://github.com/akiritsu/pRoJEct-VeXEd), change project settings, and clone your own repository into your local disk.
+
+```bash
+git clone https://github.com/{{YOUR_USERNAME}}/{{YOUR_REPOSITORY}}.git
+```
+
+2. Change directory.
+
+```bash
+cd {{YOUR_REPOSITORY_DIR}}
+```
+
+### Personalize and Customize
+
+#### _config.yml
+
+Edit **_config.yml** with your own website information.
+
+#### Collections
+
+All your articles could be stored in this folder. You could create a new collection by creating a subfolder begin with a slash, and register the basic information in **_config.yml**. Here is an example:
+
+```yaml
+# Collections
+collections:
+  notes:
+    output          : true
+    permalink       : /:collection/:title/
+    sort_by         : date
+  portfolio:
+    output          : true
+    permalink       : /:collection/:title/
+    order: # specify post order manually
+      - portfolio3.md
+      - portfolio2.md
+      - portfolio1.md
+  album:
+    output          : true
+    permalink       : /:collection/:title/
+    sort_by         : date
+```
+
+All your articles would be shown by clicking **Archive** button in the header of your website.
+
+#### Writing
+
+Delete all sample collections under **./collections/**, and have fun in writing!
+
+#### Comment
+
+Create your own account in [Disqus.com](https://disqus.com/), and change the attribute "disqus_username" in **_config.yml**.
+
+#### Test locally
+
+Run command below, and access "127.0.0.1:4000" to test your website locally.
+
+```bash
+bundle exec jekyll serve
+```
+
+#### Front Matter
+
+You can add many front matter to customize a page. For more information, visit official document: [https://jekyllrb.com/] (https://jekyllrb.com/docs/front-matter/)
+
+```yaml
+layout: post # page layout, must be one of layouts under src/_layouts
+title: # string
+author: # string
+post_list: # whether to show post list under collections/_post, one of false, "cate", "date"
+collection_list: # true or false
+toc: true # table of content, true or false
+show_date: true # whether to show date, true or false
+home_btn: true # whether to show home button, true or false
+btn_text: true # whether to show button text, true or false
+footer: true # whether to show footer, true or false
+maximize: true # whether to show maximize button, true or false
+encrypted_text: true # whether to enable encrypted text, true or false
+toc_level: 4 # the depth of toc, one of 1, 2, 3, 4, 5, 6
+category: # string
+date: 2019-5-25 # YYYY-MM-DD
+excerpt: "This is excerpt." # string
+abstract: "This is abstract. Abstract is blank by default." # string
+```
+
+## Roadmap
+
+1. On-browser code execution teminal.
+2. Code review mode.
+3. Slide mode.
+4. Rapid cheatsheet access.
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+<!-- CONTACT -->
+## Contact
+
+DeerRIDER - [Email](mailto://deerrider666@outlook.com)
+
+Project Link: [https://github.com/akiritsu/pRoJEct-VeXEd](https://github.com/akiritsu/pRoJEct-VeXEd)

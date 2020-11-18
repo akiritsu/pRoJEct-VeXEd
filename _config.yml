@@ -20,9 +20,6 @@ sass:
 
 # Collections
 collections:
-  posts:
-    output          : true
-    permalink       : /:collection/:title/
   notes:
     output          : true
     permalink       : /:collection/:title/
@@ -38,7 +35,19 @@ collections:
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
-      
+  physics:
+    output          : true
+    permalink       : /:collection/:title/
+  biology:
+    output          : true
+    permalink       : /:collection/:title/
+  finance:
+    output          : true
+    permalink       : /:collection/:title/
+  blog:
+    output          : true
+    permalink       : /:collection/:title/
+    
 # Social Media Accounts
 email               : "just-test" 
 linkedin            : 

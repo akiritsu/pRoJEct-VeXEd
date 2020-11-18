@@ -1,6 +1,6 @@
 ---
 layout: post
-title: pRoJEct-NeGYa 使用说明
+title: pRoJEct-NeGYa 中文使用说明
 author: DeerRIDER
 category: Sample
 date: 2019-7-16
@@ -10,32 +10,20 @@ date: 2019-7-16
 
 黑客帝国掉字母儿风格的个人主页模板。
 
-版本： v2.2
+版本： v2.3
 
 ## 特性
 
 1. 狂拽酷炫
 2. 代码高亮
-3. MathJax公式
-4. 文章索引
+3. MathJax公式插入
+4. 文章归档及索引
 5. 高度可定制化
 6. 加密内容
 
-## 更新日志
-
-TODO: 增加搜索文章功能
-
-2020.11.16： v2.2 完善基础样式
-
-2020.11.12: v2.1 增加collection功能
-
-2020.7.24: v2.0 修改工程结构，优化scss文件结构
-
-2019.6.15：v1.0 正式版
-
 ## 使用方法
 
-* 下载或者fork到自己的github仓库里
+* 下载[zip文件](https://codeload.github.com/akiritsu/pRoJEct-VeXEd/zip/master)，或者将[pRoJEct-VeXEd](https://github.com/akiritsu/pRoJEct-VeXEd) fork到自己的github仓库里
 * 修改_config.yml文件
 * （自定义域名）修改CNAME文件
 * 修改pages/index.md文件，自定义主页
@@ -66,3 +54,14 @@ TODO: 增加搜索文章功能
 * LICENSE：工程开源协议
 * README.md：工程自述文件
 
+## 更新日志
+
+2020.11.18： v2.3 增加评论功能
+
+2020.11.16： v2.2 完善基础样式
+
+2020.11.12: v2.1 增加collection功能
+
+2020.7.24: v2.0 修改工程结构，优化scss文件结构
+
+2019.6.15：v1.0 正式版
