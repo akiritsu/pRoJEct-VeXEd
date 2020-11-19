@@ -1,97 +1,95 @@
 <!-- collection list, shown by click "archive" buttom in header -->
 
 <div class="collection_list" id="the_collection_list">
-  <div class="collection_list_header">
-    <!-- TODO: search post -->
-    <!-- <a class="search_btn">
+    <div class="collection_list_header">
+        <!-- TODO: search post -->
+                    <!-- <a class="search_btn">
       <i class="fa fa-search"> Search</i>
     </a>
     &nbsp; -->
-    <table class="collection_list_header_title">
-      <tr>
-        <td>Archive:</td>
-        <td id="clh_title"></td>
-      </tr>
-    </table>
-    <div class="close_btn" onclick="close_collection_list()">
-      <a class="close_btn_icon">
-        <i class="fa fa-times"></i>
-      </a>
+        <table class="collection_list_header_title">
+            <tr>
+                <td>Archive:</td>
+                <td id="clh_title"></td>
+            </tr>
+        </table>
+        <div class="close_btn" onclick="close_collection_list()">
+            <a class="close_btn_icon">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
     </div>
-  </div>
-  <div class="collection_name_list">
-    <table class="vertical_center_table">
-      <tr>
-        <td>
-          <ul>
-            <!-- show all collections -->
-            <li>
-              <a class="a_collection_label" onclick="show_collection('all')"
-                >All
-              </a>
-            </li>
-            <!-- show a simple collection -->
-            {% for collection in site.collections %}
-            <li>
-              <a
-                class="a_collection_label"
-                onclick="show_collection('{{collection.label}}')"
-              >
-                {{collection.label}}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="posts_by_cate">
-    <!-- post list in all collections -->
-    <div class="post_list_in_1_collection" id="all">
-      <table class="vertical_center_table">
-        <tr>
-          <td>
-            <ul>
-              {% for collection in site.collections %}
-              <p class="h_collection_label">{{collection.label}}</p>
-              {% for post in collection.docs %}
-              <li>
-                <a
-                  class="a_title"
-                  href="{{site.url}}{{site.baseurl}}{{post.url}}"
-                  >{{post.title}}</a
-                >
-              </li>
-              {% endfor %}
-              <br />
-              {% endfor %}
-            </ul>
-          </td>
-        </tr>
-      </table>
+    <div class="collection_name_list">
+        <table class="vertical_center_table">
+            <tr>
+                <td>
+                    <ul>
+                        <!-- show all collections -->
+                        <li>
+                            <a class="a_collection_label" onclick="show_collection('all')">All
+                            </a>
+                        </li>
+                        <!-- show a simple collection -->
+                        {% for collection in site.collections %}
+                            <li>
+                                <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
+                                    {% if collection.alias %}
+                                        {{collection.alias}}
+                                    {% else %}
+                                        {{collection.label}}
+                                    {% endif %}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
-    <!-- post list in a collection -->
-    {% for collection in site.collections %}
-    <div class="post_list_in_1_collection" id="{{collection.label}}">
-      <table class="vertical_center_table">
-        <tr>
-          <td>
-            <ul>
-              {% for post in collection.docs %}
-              <li>
-                <a
-                  class="a_title"
-                  href="{{site.url}}{{site.baseurl}}{{post.url}}"
-                  >{{post.title}}</a
-                >
-              </li>
-              {% endfor %}
-            </ul>
-          </td>
-        </tr>
-      </table>
+    <div class="posts_by_cate">
+        <!-- post list in all collections -->
+        <div class="post_list_in_1_collection" id="all">
+            <table class="vertical_center_table">
+                <tr>
+                    <td>
+                        <ul>
+                            {% for collection in site.collections %}
+                                <p class="h_collection_label">
+                                    {% if collection.alias %}
+                                        {{collection.alias}}
+                                    {% else %}
+                                        {{collection.label}}
+                                    {% endif %}
+                                </p>
+                                {% for post in collection.docs %}
+                                    <li>
+                                        <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                    </li>
+                                {% endfor %}
+                                <br/>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- post list in a collection -->
+        {% for collection in site.collections %}
+            <div class="post_list_in_1_collection" id="{{collection.label}}">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                {% for post in collection.docs %}
+                                    <li>
+                                        <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 </div>

@@ -20,10 +20,13 @@ sass:
 
 # Collections
 collections:
-  notes:
+  # colletion.label is "learning_notes", use alias to avoid it  
+  learning_notes:   
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
+    # An alias should be given or the UNDERSCRO will appeared 
+    alias           : "Learning Notes"
   portfolio:
     output          : true
     permalink       : /:collection/:title/

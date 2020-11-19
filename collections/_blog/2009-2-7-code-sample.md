@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Sample Code - Quick Sort
 category: Sample
 date: 2019-2-4
