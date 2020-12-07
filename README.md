@@ -189,6 +189,7 @@ btn_text: true # whether to show button text, true or false
 footer: true # whether to show footer, true or false
 maximize: true # whether to show maximize button, true or false
 encrypted_text: true # whether to enable encrypted text, true or false
+publish: true # if you wish keep this page invisible, put false here
 toc_level: 4 # the depth of toc, one of 1, 2, 3, 4, 5, 6
 category: # string
 date: 2019-5-25 # YYYY-MM-DD

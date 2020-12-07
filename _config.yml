@@ -19,14 +19,15 @@ sass:
   sass_dir          : src/_sass
 
 # Collections
+# You can specify the order shown in Archive window. 
+# Keep it null if you want to show items in alphabetic order.
+collection_order    : ["posts", "math", "album", "physics", "biology", "finance", "physics", "my_notes", "portfolio"]
 collections:
-  # colletion.label is "learning_notes", use alias to avoid UNDERSCORE 
-  learning_notes:   
+  math:   
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
-    # An alias should be given or the UNDERSCORE will appeared 
-    alias           : "Learning Notes"
+    alias           : "Mathematics"
   portfolio:
     output          : true
     permalink       : /:collection/:title/
@@ -47,9 +48,11 @@ collections:
   finance:
     output          : true
     permalink       : /:collection/:title/
-  notes:
+  my_notes:
     output          : true
     permalink       : /:collection/:title/
+    # An alias should be given or the UNDERSCORE will appeared 
+    alias           : "My Notes"
   posts:
     output          : true
     

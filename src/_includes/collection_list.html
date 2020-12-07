@@ -3,7 +3,7 @@
 <div class="collection_list" id="the_collection_list">
     <div class="collection_list_header">
         <!-- TODO: search post -->
-                            <!-- <a class="search_btn">
+                                            <!-- <a class="search_btn">
       <i class="fa fa-search"> Search</i>
     </a>
     &nbsp; -->
@@ -30,17 +30,35 @@
                             </a>
                         </li>
                         <!-- show a simple collection -->
-                        {% for collection in site.collections %}
-                            <li>
-                                <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
-                                    {% if collection.alias %}
-                                        {{collection.alias}}
-                                    {% else %}
-                                        {{collection.label}}
+                        {% if site.collection_order %}
+                            {% for col_in_order in site.collection_order %}
+                                {% for collection in site.collections %}
+                                    {% if collection.label == col_in_order %}
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
+                                                {% if collection.alias %}
+                                                    {{collection.alias}}
+                                                {% else %}
+                                                    {{collection.label}}
+                                                {% endif %}
+                                            </a>
+                                        </li>
                                     {% endif %}
-                                </a>
-                            </li>
-                        {% endfor %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% else %}
+                            {% for collection in site.collections %}
+                                <li>
+                                    <a class="a_collection_label" onclick="show_collection('{{collection.label}}')">
+                                        {% if collection.alias %}
+                                            {{collection.alias}}
+                                        {% else %}
+                                            {{collection.label}}
+                                        {% endif %}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </td>
             </tr>
@@ -53,23 +71,47 @@
                 <tr>
                     <td>
                         <ul>
-                            {% for collection in site.collections %}
-                                <p class="h_collection_label">
-                                    {% if collection.alias %}
-                                        {{collection.alias}}
-                                    {% else %}
-                                        {{collection.label}}
-                                    {% endif %}
-                                </p>
-                                {% for post in collection.docs %}
-                                    {% if post.publish != false %}
-                                        <li>
-                                            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-                                        </li>
-                                    {% endif %}
+                            {% if site.collection_order %}
+                                {% for col_in_order in site.collection_order %}
+                                    {% for collection in site.collections %}
+                                        {% if collection.label == col_in_order %}
+                                            <p class="h_collection_label">
+                                                {% if collection.alias %}
+                                                    {{collection.alias}}
+                                                {% else %}
+                                                    {{collection.label}}
+                                                {% endif %}
+                                            </p>
+                                            {% for post in collection.docs %}
+                                                {% if post.publish != false %}
+                                                    <li>
+                                                        <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <br/>
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endfor %}
-                                <br/>
-                            {% endfor %}
+                            {% else %}
+                                {% for collection in site.collections %}
+                                    <p class="h_collection_label">
+                                        {% if collection.alias %}
+                                            {{collection.alias}}
+                                        {% else %}
+                                            {{collection.label}}
+                                        {% endif %}
+                                    </p>
+                                    {% for post in collection.docs %}
+                                        {% if post.publish != false %}
+                                            <li>
+                                                <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <br/>
+                                {% endfor %}
+                            {% endif %}
                         </ul>
                     </td>
                 </tr>
