@@ -20,12 +20,12 @@ sass:
 
 # Collections
 collections:
-  # colletion.label is "learning_notes", use alias to avoid it  
+  # colletion.label is "learning_notes", use alias to avoid UNDERSCORE 
   learning_notes:   
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
-    # An alias should be given or the UNDERSCRO will appeared 
+    # An alias should be given or the UNDERSCORE will appeared 
     alias           : "Learning Notes"
   portfolio:
     output          : true
@@ -47,9 +47,11 @@ collections:
   finance:
     output          : true
     permalink       : /:collection/:title/
-  blog:
+  notes:
     output          : true
     permalink       : /:collection/:title/
+  posts:
+    output          : true
     
 # Social Media Accounts
 email               : "just-test" 
@@ -86,13 +88,6 @@ defaults:
       layout: "post"
       tags: n0t3s
       author: aaa
-  -    
-    scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: "post"
-      tags: pfl
 
 # Plugins
 plugins:

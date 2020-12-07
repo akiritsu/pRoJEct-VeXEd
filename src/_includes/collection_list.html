@@ -3,7 +3,7 @@
 <div class="collection_list" id="the_collection_list">
     <div class="collection_list_header">
         <!-- TODO: search post -->
-                    <!-- <a class="search_btn">
+                            <!-- <a class="search_btn">
       <i class="fa fa-search"> Search</i>
     </a>
     &nbsp; -->
@@ -62,9 +62,11 @@
                                     {% endif %}
                                 </p>
                                 {% for post in collection.docs %}
-                                    <li>
-                                        <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-                                    </li>
+                                    {% if post.publish != false %}
+                                        <li>
+                                            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                        </li>
+                                    {% endif %}
                                 {% endfor %}
                                 <br/>
                             {% endfor %}
@@ -81,9 +83,11 @@
                         <td>
                             <ul>
                                 {% for post in collection.docs %}
-                                    <li>
-                                        <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-                                    </li>
+                                    {% if post.publish != false %}
+                                        <li>
+                                            <a class="a_title" href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+                                        </li>
+                                    {% endif %}
                                 {% endfor %}
                             </ul>
                         </td>

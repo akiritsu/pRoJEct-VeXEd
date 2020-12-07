@@ -6,6 +6,7 @@ post_list: "date"
 collection_list: true
 toc: true
 show_date: true
+publish: true
 home_btn: true
 btn_text: true
 footer: true
