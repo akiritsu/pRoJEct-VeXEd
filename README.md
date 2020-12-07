@@ -177,7 +177,7 @@ bundle exec jekyll serve
 You can add many front matter to customize a page. For more information, visit official document: [https://jekyllrb.com/] (https://jekyllrb.com/docs/front-matter/)
 
 ```yaml
-layout: post # page layout, must be one of layouts under src/_layouts
+ # page layout, must be one of layouts under src/_layouts
 title: # string
 author: # string
 post_list: # whether to show post list under collections/_post, one of false, "cate", "date"

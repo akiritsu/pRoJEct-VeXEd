@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: pRoJEct-NeGYa 中文使用说明
 author: DeerRIDER
 category: Sample

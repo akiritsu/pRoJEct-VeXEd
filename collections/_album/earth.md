@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Our Great Planet!
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Text Styles and Markdown Quick Reference
 author: DeerRIDER
 post_list: "date"
