@@ -1,4 +1,4 @@
-# Site Settings
+# 1. Site Settings
 title               : pRoJEct-VeXEd
 owner               : "DeerRIDER"
 ## url                : "https://akiritsu.github.io"
@@ -6,19 +6,10 @@ owner               : "DeerRIDER"
 permalink           : /:title/
 description         : "A hacker-style note-keeping website template."
 markdown            : kramdown
+statement           : "Designed by DeerRIDER, All Rights Reserved"
+bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
 
-# Where things are
-source              : .
-destination         : ./_site
-collections_dir     : collections
-plugins_dir         : src/_plugins # takes an array of strings and loads plugins in that order
-layouts_dir         : src/_layouts
-data_dir            : src/_data
-includes_dir        : src/_includes
-sass:
-  sass_dir          : src/_sass
-
-# Collections
+# 2. Your Collections
 # You can specify the order shown in Archive window. 
 # Keep it null if you want to show items in alphabetic order.
 collection_order    : 
@@ -66,8 +57,33 @@ collections:
     alias           : "My Notes"
   posts:
     output          : true
-    
-# Social Media Accounts
+
+# 3. Comment settings（disqus.com）
+disqus_username     : akiritsu
+
+# 4. Default page settings (WILL BE overwriten by front-matters of a page)
+defaults:
+  -    
+    scope:
+      path          : ""  # an empty string here means all files in the project
+    values:
+      layout              : "post"      # which layout to use by default
+      publish             : true        # whether to show by default      
+      btn_text            : true        # whether show button text by default
+      collection_list     : true        # whether show archive button by default
+      home_btn            : true        # whether show home by default
+      maximize            : true        # whether show maximize button by default
+      encrypted_text      : false       # whether use encrytion function by default
+      toc                 : true        # whether show table of content by default
+      toc_level           : 3           # the toc depth by default
+      author              : "DeerRIDER" # author name by default
+      show_date           : true        # whether show date message by default
+      category            :             # category by default
+      post_list           : false       # whether show list of post by default      
+      comment             : true
+      footer              : true        # whether show footer by default
+
+# 5. Social Media Accounts
 email               : "just-test" 
 linkedin            : 
 github              : "just-test" 
@@ -78,37 +94,26 @@ facebook            : "just-test"
 instagram           : 
 youtube             : "just-test"
 steam               : "just-test"
-weibo               : "just-test"
+weibo               :
+      
+# 6. Where things are
+source              : .
+destination         : ./_site
+collections_dir     : collections
+plugins_dir         : src/_plugins # takes an array of strings and loads plugins in that order
+layouts_dir         : src/_layouts
+data_dir            : src/_data
+includes_dir        : src/_includes
+sass:
+  sass_dir          : src/_sass
 
-# Global Variables
-statement           : "Designed by DeerRIDER, All Rights Reserved"
-toc_level           : 3
-bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
-# Disqus settings（disqus.com）
-disqus_username     : akiritsu
-
-# Default page configuration
-defaults:
-  -
-    scope:
-      path: "_posts" # an empty string here means all files in the project
-    values:
-      layout: "post"
-  -    
-    scope:
-      path: ""
-      type: notes # file under notes
-    values:
-      layout: "post"
-      tags: n0t3s
-      author: aaa
-
-# Plugins
+# 7. Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   
+# 8. Others
 # Cross-Origin Resource Sharing header
 webrick:
   headers:

@@ -1,5 +1,4 @@
 ---
-
 title: Our Great Planet!
 ---
 

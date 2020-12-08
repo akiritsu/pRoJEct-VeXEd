@@ -1,10 +1,12 @@
 ---
-
 title: pRoJEct-NeGYa 中文使用说明
 author: DeerRIDER
 category: Sample
 date: 2019-7-16
+comment: ture
 ---
+
+{{page.comment}}
 
 # PRoJEct-VeXEd
 

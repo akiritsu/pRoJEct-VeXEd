@@ -177,11 +177,11 @@ bundle exec jekyll serve
 You can add many front matter to customize a page. For more information, visit official document: [https://jekyllrb.com/] (https://jekyllrb.com/docs/front-matter/)
 
 ```yaml
- # page layout, must be one of layouts under src/_layouts
-title: # string
-author: # string
-post_list: # whether to show post list under collections/_post, one of false, "cate", "date"
-collection_list: # true or false
+layout: post # page layout, must be one of layouts under src/_layouts
+title: "Sample" # string
+author: "your_name" # string
+post_list: "cate" # whether to show post list under collections/_post, one of false, "cate", "date"
+collection_list: true # true or false
 toc: true # table of content, true or false
 show_date: true # whether to show date, true or false
 home_btn: true # whether to show home button, true or false
@@ -191,7 +191,8 @@ maximize: true # whether to show maximize button, true or false
 encrypted_text: true # whether to enable encrypted text, true or false
 publish: true # if you wish keep this page invisible, put false here
 toc_level: 4 # the depth of toc, one of 1, 2, 3, 4, 5, 6
-category: # string
+comment: ture # whether to show comment area
+category: "sample" # string
 date: 2019-5-25 # YYYY-MM-DD
 excerpt: "This is excerpt." # string
 abstract: "This is abstract. Abstract is blank by default." # string
