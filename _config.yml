@@ -84,11 +84,11 @@ defaults:
       footer              : true        # whether show footer by default
 
 # 5. Social Media Accounts
-email               : "just-test" 
+email               : "https://github.com/akiritsu/pRoJEct-VeXEd" 
 linkedin            : 
 github              : "just-test" 
 gitlab              : 
-website             : 
+website             : "https://github.com/akiritsu/pRoJEct-VeXEd"
 twitter             : "just-test"
 facebook            : "just-test"
 instagram           : 
