@@ -1,6 +1,7 @@
 <!-- collection list, shown by click "archive" buttom in header -->
-
-<div class="collection_list" id="the_collection_list">
+<div class="collection_list_container"  id="the_collection_list">
+<div class="collection_list_background"  onclick="close_collection_list()"></div>
+<div class="collection_list" onload="none">
     <div class="collection_list_header">
         <!-- TODO: search post -->
                                             <!-- <a class="search_btn">
@@ -138,4 +139,5 @@
             </div>
         {% endfor %}
     </div>
+</div>
 </div>

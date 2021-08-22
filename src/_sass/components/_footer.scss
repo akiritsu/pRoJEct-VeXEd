@@ -1,9 +1,11 @@
 .footer {
-  height: auto;
-  padding: 0 0 1% 0;
-  margin: 25px 0 10px 0;
   position: relative;
+  display: block;
   text-align: center;
+  top: auto;
+  height: auto;
+  padding: 0;
+  margin: 25px 0 0 0;
   .nav_bar {
     bottom: 0;
     margin: 0;
@@ -20,7 +22,7 @@
   }
   .footer_owner_info {
     font-size: $footer-icon-size;
-    margin: 0 0 10px 0;
+    margin: 0;
     padding: 0;
     p {
       font-size: $footer-text-size;
@@ -30,7 +32,7 @@
     }
   }
   .footer_copyright {
-    margin: 0 0 10px 0;
+    margin: 0;
     font-size: 12px;
   }
   .footer_btn {

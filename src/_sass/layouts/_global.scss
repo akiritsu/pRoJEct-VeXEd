@@ -31,13 +31,21 @@
   border-top: none;
   article {
     margin: 0;
-    padding: 10px 17px 17px 17px;
+    padding: 10px 19px 19px 19px;
     text-align: left !important;
-    min-height: 90%; 
+    min-height: 88%; 
+  }
+  td {
+    border: $thin-border;  
   }
   .encrypted {
     color: rgba($color-warning, 0.9);
     word-break: break-all;
+  }
+  .no-border {
+    td {
+      border: 1px solid rgba($color-postbg, 0);
+    }
   }
 }
 // used to toggle absence of elements
@@ -45,6 +53,7 @@
   visibility: visible !important;
   @include fade_in;
 }
+
 // screen auto-adjustment
 @media screen and (max-width: 800px) {
   .page .container {

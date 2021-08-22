@@ -1,6 +1,6 @@
 // global base reset
 body {
-  line-height: 1.25;
+  line-height: 1.7;
   font-size: $font-size-primary;
   color: $color-primary;
   font-family: $font-serif;
@@ -14,18 +14,18 @@ h1 {
 h2 {
   font-size: $font-size-h2;
   font-weight: lighter;
-  margin: 1.8em 0 0.6em 0;
+  margin: 1.8em 0 0.8em 0;
   border-bottom: $thin-border;
 }
 h3 {
   font-size: $font-size-h3;
   font-weight: lighter;
-  margin: 1.8em 0 0.6em 0;
+  margin: 1.9em 0 0.8em 0;
 }
 h4 {
   font-size: $font-size-h4;
   font-weight: lighter;
-  margin: 2.2em 0 0.6em 0;
+  margin: 1.4em 0 0.8em 0;
 }
 h5 {
   font-size: $font-size-h5;
@@ -38,8 +38,12 @@ h6 {
   margin: 2.4em 0 0.6em 0;
 }
 p {
-  margin: 10px;
+  margin: 5px 0px;
   display: block;
+}
+strong {
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0 rgb(92, 94, 79);
 }
 hr {
   border: 0;
@@ -70,7 +74,7 @@ button {
 // links
 a {
   color: $color-primary;
-  text-decoration: underline;
+  text-decoration: underline dashed rgba($color-primary, 0.5);
 }
 a:hover {
   color: $color-secondary;
@@ -83,22 +87,30 @@ img {
   display: block; // image center align
 }
 ol {
-  padding: 0 0 0 1.6em;
+  padding: 0 0 0 1.3em;
+  margin: 6px 12px 6px 0px;
 }
 ul {
-  padding: 0 0 0 1.6em;
+  padding: 0 0 0 1.2em;
+  margin: 6px 12px 6px 0px;
 }
 blockquote {
-  margin: 1.2em 4em 0.8em 4em;
-  font-size: 90%;
-  font-style: italic;
-  line-height: 124%;
+  margin: 0.55em 2em 0.8em 0em;
+  font-size: $font-smaller;
+  font-style: none;
+  line-height: 1.5;
+  color: mix($color-secondary,rgb(177, 157, 157));
+}
+// footnote mark
+sup a{
+  font-size: 105%;
   color: $color-secondary;
-  border-left: 0.5px solid $color-secondary;
+  text-decoration: none !important;
 }
 // code highlight
 pre {
   border: $thin-border;
+  margin: 0.6em 0.1em;
 }
 // table style
 table {
@@ -115,7 +127,7 @@ table {
     }
   }
   tbody {
-    td {
+    td {  
       padding: 8px 10px;
     }
     border-bottom: $secondary-border;
@@ -124,13 +136,6 @@ table {
 code {
   font-family: $font-monospace;
 }
-// markdown style reset
-article .language-plaintext {
-  font-size: 90%;
-  color: $color-secondary;
-  text-shadow: -0.5px -0.5px 0 rgb(194, 202, 157), 0.5px 0.5px 0 #333,
-    0.5px 0.5px 0 #444;
-}
 article {
   a {
     padding: 0 0.3em;
@@ -138,4 +143,40 @@ article {
   a:hover {
     font-weight: bold;
   }
+}
+// markdown style reset: keyword
+article .language-plaintext {
+  font-size: 98%;
+  color: $color-secondary;
+  text-shadow: -0.5px -0.5px 0 rgb(228, 248, 138), 0.5px 0.5px 0 #333,
+    0.5px 0.5px 0 rgb(93, 94, 85);
+}
+// markdown style reset: checkbox
+input[type="checkbox"] {
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin: 0px 10px 0px 3px;
+  text-align: center;
+  border: 1.5px solid $color-primary;
+  border-radius: 1px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  border: 1.5px solid $color-primary;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2714";
+  vertical-align: middle;
+  color: $color-primary;
+  font-size: 15px;
+  font-weight: bold;
 }

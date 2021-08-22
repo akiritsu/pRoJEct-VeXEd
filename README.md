@@ -6,13 +6,14 @@
 
 <!-- LOGO -->
 <br />
+
 <p align="center">
   <a href="https://github.com/akiritsu/pRoJEct-VeXEd">
     <img src="src/assets/img/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">pRoJEct-VeXEd</h3>
-    <h5  align="center">v 2.3<h5
+    <h5 align="center">v 2.4</h5>
     <br />
   <p align="center">
     pRoJEct-NeGYa is a hacker-like, highly-customizable theme for note-keeping, personal-website or CV.
@@ -20,10 +21,11 @@
     <br />
     <a href="https://akiritsu.github.io/pRoJEct-VeXEd/">View Demo</a>
     ·
-    <a href="https://akiritsu.github.io/pRoJEct-VeXEd/issues">Report Bug</a>
+    <a href="https://github.com/akiritsu/pRoJEct-VeXEd/issues">Report Bug</a>
     ·
-    <a href="https://akiritsu.github.io/pRoJEct-VeXEd/issues">Request Feature</a>
+    <a href="https://github.com/akiritsu/pRoJEct-VeXEd/issues">Request Feature</a>
   </p>
+
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -78,6 +80,7 @@ This jekyll theme is a content-oriented blog, cv or learning notes, aimed at pro
 * Font Awesome
 * Sjcl
 * Disqus
+* Mermaid
 
 ## Getting Started
 
@@ -108,6 +111,12 @@ gem install bundler
 * jekyll
 ```bash
 bundler install jekyll
+```
+
+* jekyll plugins
+
+```bash
+gem install jekyll-sitemap jekyll-feed jekyll-seo-tag jekyll-mermaid
 ```
 
 ### Installation
