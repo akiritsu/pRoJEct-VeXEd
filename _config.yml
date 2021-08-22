@@ -1,8 +1,8 @@
 # 1. Site Settings
 title               : pRoJEct-VeXEd
 owner               : "DeerRIDER"
-## url                : "https://akiritsu.github.io"
-## baseurl            : "/pRoJEct-VeXEd"
+url                : "https://akiritsu.github.io"
+baseurl            : "/pRoJEct-VeXEd"
 permalink           : /:title/
 description         : "A hacker-style note-keeping website template."
 markdown            : kramdown
