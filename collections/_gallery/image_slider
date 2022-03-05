@@ -1,0 +1,68 @@
+---
+title: PHOTO GALLERY
+category: Wallpaper
+comment: false
+---
+
+<center>
+<div class="container">
+  <div class="image">
+            <img src="https://wallpaperaccess.com/full/131756.jpg" alt="">
+  </div>
+  <div class="image">
+            <img src="https://wallpaperaccess.com/full/496801.jpg" alt="">
+  </div>
+  <div class="image">
+            <img src="https://wallpaperaccess.com/full/494151.jpg" alt="">
+  </div>
+  <div class="image">
+            <img src="https://wallpaperaccess.com/full/506916.jpg" alt="">
+  </div>
+  <div class="image">
+            <img src="https://images.pling.com/img/00/00/52/38/08/1300347/829637e777cd75b99de2e6a554fb28f565bc.jpg" alt="">
+  </div>
+  <div class="button">
+            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+            <a onclick="nextimg(1)" class="next">&#10095;</a>
+  </div>
+  <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
+
+<script>
+  var imageno =1;
+    displayimg(imageno);
+
+  function nextimg(n){
+    displayimg(imageno += n)
+        }
+
+  function currentSlide(n){
+    displayimg(imageno = n)
+        }
+
+  function displayimg(n){
+    var i;
+    var image = document.getElementsByClassName("image");
+    var dots = document.getElementsByClassName("dot");
+    if(n > image.length){
+    imageno = 1;
+      }
+    if(n < 1){
+    imageno = image.length;
+      }
+    for(i=0; i < image.length; i++){
+    image[i].style.display = "none";
+      }
+    for(i=0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active", "");
+      }
+    image[imageno - 1].style.display ="block";
+    dots[imageno - 1].className += " active";
+}
+</script>

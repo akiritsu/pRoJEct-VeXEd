@@ -1,6 +1,17 @@
+<script src="{{site.url}}{{site.baseurl}}/src/assets/js/a076d05399.js" crossorigin='anonymous' async></script>
 <div class="footer">
   <nav class="nav_bar">
     <ul class="footer_owner_info">
+      <!-- website -->
+      {% if site.website %}
+      <a class="footer_btn" href="{{ site.website }}">
+        <i class="fab fa-angellist">
+          {% if page.btn_text != false %}
+          <p>.edu</p>
+          {% endif %}
+        </i>
+      </a>
+      {% endif %}
       <!-- email -->
       {% if site.email %}
       <a class="footer_btn" href="mailto://{{ site.email }}">
@@ -10,24 +21,11 @@
           {% endif %}
         </i>
       </a>
-      {% endif %}
-      <!-- linkedin -->
-      {% if site.linkedin %}
-      <a
-        class="footer_btn"
-        href="https://www.linkedin.com/in/{{ site.linkedin }}"
-      >
-        <i class="fa fa-linkedin">
-          {% if page.btn_text != false %}
-          <p>LinkedIn</p>
-          {% endif %}
-        </i>
-      </a>
-      {% endif %}
+      {% endif %}      
       <!-- github -->
       {% if site.github %}
       <a class="footer_btn" href="https://github.com/{{ site.github }}">
-        <i class="fa fa-github">
+        <i class="fab fa-github">
           {% if page.btn_text != false %}
           <p>Github</p>
           {% endif %}
@@ -37,49 +35,61 @@
       <!-- gitlab -->
       {% if site.gitlab %}
       <a class="footer_btn" href="https://gitlab.com/{{ site.gitlab }}">
-        <i class="fa fa-gitlab">
+        <i class="fab fa-gitlab">
           {% if page.btn_text != false %}
           <p>Gitlab</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- website -->
-      {% if site.website %}
-      <a class="footer_btn" href="{{ site.website }}">
-        <i class="fa fa-link">
+     <!-- bitbucket -->
+      {% if site.bitbucket %}
+      <a
+        class="footer_btn"
+        href="https://bitbucket.org/{{ site.bitbucket }}"
+      >
+        <i class="fab fa-bitbucket">
           {% if page.btn_text != false %}
-          <p>Website</p>
+          <p>bitbucket</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- twitter -->
-      {% if site.twitter %}
-      <a class="footer_btn" href="https://twitter.com/{{ site.twitter }}">
-        <i class="fa fa-twitter">
+      <!-- pastebin -->
+      {% if site.pastebin %}
+      <a
+        class="footer_btn"
+        href="https://www.pastebin.com/u/{{ site.pastebin }}"
+      >
+        <i class="far fa-file-code">
           {% if page.btn_text != false %}
-          <p>Twitter</p>
+          <p>Pastebin</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- facebook -->
-      {% if site.facebook %}
-      <a class="footer_btn" href="https://www.facebook.com/{{ site.facebook }}">
-        <i class="fa fa-facebook">
+    <!-- discord -->
+      {% if site.discord %}
+      <a
+        class="footer_btn"
+        href="https://discord.com/channels/{{ site.discord }}"
+      >
+        <i class="fab fa-discord">
           {% if page.btn_text != false %}
-          <p>Facebook</p>
+          <p>Discord</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- instagram -->
-      {% if site.instagram %}
-      <a class="footer_btn" href="https://instagram.com/{{ site.instagram }}">
-        <i class="fa fa-instagram">
+     <!-- medium -->
+      {% if site.medium %}
+      <a
+        class="footer_btn"
+        href="https://medium.com/{{ site.medium }}"
+      >
+        <i class="fab fa-medium">
           {% if page.btn_text != false %}
-          <p>Instagram</p>
+          <p>Medium</p>
           {% endif %}
         </i>
       </a>
@@ -90,32 +100,52 @@
         class="footer_btn"
         href="https://www.youtube.com/user/{{ site.youtube }}"
       >
-        <i class="fa fa-youtube">
+        <i class="fab fa-youtube">
           {% if page.btn_text != false %}
           <p>Youtube</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- steam -->
-      {% if site.steam %}
-      <a
-        class="footer_btn"
-        href="https://steamcommunity.com/id/{{ site.steam }}"
-      >
-        <i class="fa fa-steam">
+      <!-- twitter -->
+      {% if site.twitter %}
+      <a class="footer_btn" href="https://twitter.com/{{ site.twitter }}">
+        <i class="fab fa-twitter">
           {% if page.btn_text != false %}
-          <p>Steam</p>
+          <p>Twitter</p>
           {% endif %}
         </i>
       </a>
       {% endif %}
-      <!-- weibo -->
-      {% if site.weibo %}
-      <a class="footer_btn" href="https://weibo.com/u/{{ site.weibo }}">
-        <i class="fa fa-weibo">
+      <!-- facebook -->
+      {% if site.facebook %}
+      <a class="footer_btn" href="https://www.facebook.com/{{ site.facebook }}">
+        <i class="fab fa-facebook">
           {% if page.btn_text != false %}
-          <p>Weibo</p>
+          <p>Facebook</p>
+          {% endif %}
+        </i>
+      </a>
+      {% endif %}
+      <!-- instagram -->
+      {% if site.instagram %}
+      <a class="footer_btn" href="https://instagram.com/{{ site.instagram }}">
+        <i class="fab fa-instagram">
+          {% if page.btn_text != false %}
+          <p>Instagram</p>
+          {% endif %}
+        </i>
+      </a>
+      {% endif %}
+      <!-- linkedin -->
+      {% if site.linkedin %}
+      <a
+        class="footer_btn"
+        href="https://www.linkedin.com/in/{{ site.linkedin }}"
+      >
+        <i class="fab fa-linkedin">
+          {% if page.btn_text != false %}
+          <p>LinkedIn</p>
           {% endif %}
         </i>
       </a>
@@ -123,7 +153,7 @@
     </ul>
     <!-- copyright -->
     <ul class="footer_copyright">
-      <li class="copyright">© 2015 - 2020</li>
+      <li class="copyright">© 2015 - <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script></li>
       {% if site.statement %}
       <li>{{ site.statement }}</li>
       {% endif %}
