@@ -1,13 +1,14 @@
 # 1. Site Settings
-title               : pRoJEct-VeXEd
-owner               : "DeerRIDER"
-url                : "https://akiritsu.github.io"
-baseurl            : "/pRoJEct-VeXEd"
+title               : Read Loud
+owner               : "読み上げ"
+url                 : "https://readloud.github.io"
+baseurl             : "/"
 permalink           : /:title/
-description         : "A hacker-style note-keeping website template."
+description         : "Read Aloud is the most effective method of teaching reading because with this method we can condition the brain to associate reading as a fun activity. It also creates basic knowledge, builds a collection of words/vocabularies (vocabulary), and provides a good reading role model."
 markdown            : kramdown
-statement           : "Designed by DeerRIDER, All Rights Reserved"
-bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
+statement           : "読み上げ - All Rights Reserved"
+bgtext              : "ABCDEFGHIJKLMNOPQRTUSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]<>~" # texts randomly displayed in background
+
 
 # 2. Your Collections
 # You can specify the order shown in Archive window. 
@@ -15,51 +16,51 @@ bgtext              : "ABCFGHKLMNPQRSVWXYZabcdefghijklmnopqrstuvwxyz@#$%&*+-;/[]
 collection_order    : 
   [
     "posts",
-    "math",
-    "album",
-    "physics",
-    "biology",
-    "finance",
-    "physics",
-    "my_notes",
+    "tools",
+    "notes",
+    "gallery",
     "portfolio",
-  ]
+   ]
 collections:
-  math:   
+  posts:   
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
-    alias           : "Mathematics"
-  portfolio:
-    output          : true
-    permalink       : /:collection/:title/
-    order: # specify post order manually
-      - portfolio3.md
-      - portfolio2.md
-      - portfolio1.md
-  album:
+    alias           : "投稿"
+  aoc2018:
     output          : true
     permalink       : /:collection/:title/
     sort_by         : date
-  physics:
+    alias           : "コードの出現"
+  tools:
     output          : true
     permalink       : /:collection/:title/
-  biology:
+    alias           : "ツール"
+  repository:
     output          : true
     permalink       : /:collection/:title/
-  finance:
-    output          : true
-    permalink       : /:collection/:title/
-  my_notes:
+    alias           : "リポジトリ"
+  notes:
     output          : true
     permalink       : /:collection/:title/
     # An alias should be given or the UNDERSCORE will appeared 
-    alias           : "My Notes"
+    alias           : "ノート"
+  gallery:
+    output          : true
+    permalink       : /:collection/:title/
+    # An alias should be given or the UNDERSCORE will appeared 
+    alias           : "マイギャラリー"
+  portfolio:
+    output          : true
+    permalink       : /:collection/:title/
+    alias           : "ポートフォリオ"
+    order	          : # specify post order manually
   posts:
+    alias           : "投稿"
     output          : true
 
 # 3. Comment settings（disqus.com）
-disqus_username     : akiritsu
+disqus_username     : mansz81
 
 # 4. Default page settings (WILL BE overwriten by front-matters of a page)
 defaults:
@@ -76,25 +77,28 @@ defaults:
       encrypted_text      : false       # whether use encrytion function by default
       toc                 : true        # whether show table of content by default
       toc_level           : 3           # the toc depth by default
-      author              : "DeerRIDER" # author name by default
+      author              : "読み上げ"   # author name by default
       show_date           : true        # whether show date message by default
-      category            :             # category by default
+      category            : course      # category by default
       post_list           : false       # whether show list of post by default      
-      comment             : true
+      comment             : true        # whether show comment of post by default 
       footer              : true        # whether show footer by default
 
 # 5. Social Media Accounts
-email               : "https://github.com/akiritsu/pRoJEct-VeXEd" 
-linkedin            : 
-github              : "just-test" 
-gitlab              : 
-website             : "https://github.com/akiritsu/pRoJEct-VeXEd"
-twitter             : "just-test"
-facebook            : "just-test"
-instagram           : 
-youtube             : "just-test"
-steam               : "just-test"
-weibo               :
+website             : "lpkia.academia.edu/mansz"
+email               : "mansz@academia.edu" 
+github              : "readloud"
+gitlab              : "readloud"
+bitbucket           : "mansz"
+pastebin            : "mansz81"
+discord             : "oneplus#3145"
+medium              : "mansz"
+facebook            : "mansz.81"
+twitter             : "mansz81"
+instagram           : "mansz81"
+linkedin            : "oneplus-undefined-38610b232"
+youtube             : "UCPc_4aEsYhe_FnoC0rkZUTQ"
+
       
 # 6. Where things are
 source              : .

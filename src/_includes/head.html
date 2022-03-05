@@ -13,6 +13,7 @@
     <meta content="{{ desc }}" name="description"/>
     <!-- referer for 3rd-part images-->
     <meta content="no-referrer" name="referrer"/>
+    <meta name="p:domain_verify" content="036375eee971553471041537850b7cfc"/>
     <!-- title -->
     <title>
         {% if page.title %}
@@ -23,7 +24,8 @@
         {% endif %}
     </title>
     <!-- icon -->
-    <link href="{{site.url }}{{site.baseurl}}/src/assets/img/favicon.ico" rel="shortcut icon bookmark" type="image/x-icon"/>
+    <!--<link href="{{site.url}}{{site.baseurl}}/src/assets/img/favicon.ico" rel="shortcut icon bookmark" type="image/x-icon"/> -->
+    <link href="https://avatars.githubusercontent.com/u/67372333?s=40&v=4" rel="shortcut icon bookmark" type="image/x-icon"/>
     <!-- global stylesheet -->
     <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/src/assets/css/main.css" type="text/css"/>
     <!-- fa 5.9.0 -->
@@ -34,6 +36,7 @@
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <!-- mermaid 8.11.5-->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.5/mermaid.min.js"></script>
-    
+    <!-- custom-->
+    <script src="{{site.url}}{{site.baseurl}}/src/assets/js/a076d05399.js" async></script>
     {% seo %}
 </head>
