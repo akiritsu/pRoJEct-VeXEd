@@ -1,6 +1,6 @@
 // global base reset
 body {
-  line-height: 1.75;
+  line-height: 1.7;
   font-size: $font-size-primary;
   color: $color-primary;
   font-family: $font-serif;
@@ -38,13 +38,12 @@ h6 {
   margin: 2.4em 0 0.6em 0;
 }
 p {
-  margin: $global-section-margin 0px;
+  margin: 5px 0px;
   display: block;
 }
 strong {
-  color: mix($color-primary, rgba(#ddd, 1));
-  -webkit-text-stroke: 0.5px $color-primary;
-  // text-shadow: 0.35px 0.35px 0 $color-primary;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0 rgb(92, 94, 79);
 }
 hr {
   border: 0;
@@ -75,7 +74,7 @@ button {
 // links
 a {
   color: $color-primary;
-  text-decoration: underline dotted rgba($color-primary, 0.4);
+  text-decoration: underline dashed rgba($color-primary, 0.5);
 }
 a:hover {
   color: $color-secondary;
@@ -83,28 +82,24 @@ a:hover {
   cursor: pointer;
 }
 img {
-  max-width: 95%;
+  max-width: 100%;
   margin: 0 auto; // image center align
   display: block; // image center align
-  background-color: whitesmoke;
 }
 ol {
-  padding: 0 0 0 1.42em;
-  margin: $global-section-margin 12px 12px 0px;
-  display: block;
-  list-style-type: decimal;
+  padding: 0 0 0 1.3em;
+  margin: 6px 12px 6px 0px;
 }
 ul {
   padding: 0 0 0 1.2em;
-  margin: $global-section-margin 12px 12px 0px;
-  list-style: disc;
+  margin: 6px 12px 6px 0px;
 }
 blockquote {
-  margin: $global-section-margin 0em 0.55em 0em;
+  margin: 0.55em 2em 0.8em 0em;
   font-size: $font-smaller;
   font-style: none;
   line-height: 1.5;
-  color: $color-blockquote;
+  color: mix($color-secondary,rgb(177, 157, 157));
 }
 // footnote mark
 sup a{
@@ -117,7 +112,6 @@ pre {
   border: $thin-border;
   margin: 0.6em 0.1em;
 }
-
 // table style
 table {
   width: 100%;
@@ -136,7 +130,7 @@ table {
     td {  
       padding: 8px 10px;
     }
-    border-bottom: $thin-border;
+    border-bottom: $secondary-border;
   }
 }
 code {
@@ -153,11 +147,9 @@ article {
 // markdown style reset: keyword
 article .language-plaintext {
   font-size: 98%;
-  font-weight: bold;
   color: $color-secondary;
-  -webkit-text-stroke: 0.5px $color-primary; // stroke text
-  // text-shadow: -0.4px -0.4px 0 rgb(233, 255, 135), 0.4px 0.4px 0 rgb(48, 253, 59),
-    // 0.4px 0.4px 0 rgb(95, 99, 65);
+  text-shadow: -0.5px -0.5px 0 rgb(228, 248, 138), 0.5px 0.5px 0 #333,
+    0.5px 0.5px 0 rgb(93, 94, 85);
 }
 // markdown style reset: checkbox
 input[type="checkbox"] {
