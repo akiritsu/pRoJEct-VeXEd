@@ -1,6 +1,7 @@
 // global variables
-$color-primary: rgb(94, 223, 43);
-$color-secondary: rgb(247, 193, 17);
+$color-primary: rgb(84, 235, 24);
+$color-secondary: rgb(240, 188, 18);
+$color-blockquote: #e0ac3c;
 $color-warning: rgb(238, 63, 40);
 $color-bg: rgb(24, 17, 17);
 $color-postbg: rgb(0, 0, 0);
@@ -13,7 +14,7 @@ $font-size-h3: 22px;
 $font-size-h4: 19.5px;
 $font-size-h5: 18.5px;
 $font-size-h6: 18px;
-$font-size-primary: 16.8px;
+$font-size-primary: 16px;
 $font-smaller: 93%;
 $font-bigger: 108%;
 $blk-duration: 1.2s;
@@ -27,6 +28,7 @@ $toc-position: $header-height + 1px;
 $footer-icon-size: 14px;
 $footer-text-size: $footer-icon-size * 0.9;
 $collection-list-header-size: 30px;
+$global-section-margin: 4px;
 
 // standard border
 $thick-border: 2.1px solid $color-primary;
@@ -37,15 +39,15 @@ $thin-border: 0.5px solid rgba($color-primary, 0.6);
 // syntax highlight
 $code-primary: $color-primary;
 $comment: $color-secondary;
-$keyword: #8a31ff;
+$keyword: #66d4ff;
 $type: rgb(195, 233, 25);
-$variable: #e24637;
-$number: #66faff;
-$string: rgb(230, 126, 29);
-$punctuation: #52acf7;
+$variable: #a159ff;
+$number: #4ef9ff;
+$string: #ad7f7f;
+$punctuation: #549ef3;
 $namespace: #8a076d;
-$class: #c43144;
-$built-in: #9e7c7c;
+$class: rgb(230, 126, 29);
+$built-in: #be273b;
 $global: #52c96c;
 $error: $color-warning;
 $code-background: rgb(19, 16, 16);

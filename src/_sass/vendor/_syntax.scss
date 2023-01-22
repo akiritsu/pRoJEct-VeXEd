@@ -6,14 +6,15 @@
   word-wrap: break-word;
   color: $code-primary;
   font-family: $font-monospace;
-  font-size: $font-smaller;
+  font-size: 86%;
+  line-height: 1.3;
   padding: 5px 5px 7px 5px;
   .w /* specially highlighted whitespace */ {
     color: rgba($code-background, 0.6);
   }
   .err /* Error */ {
     color: $error;
-    background-color: $error-background;
+    background-color: inherit;
   }
   .x /* Other. Token for data not matched by a parser */ {
     color: $code-primary;
@@ -208,7 +209,7 @@
   background-color: $code-background;  
   overflow-x: auto;
   @include thin_scrollbar; 
-    width: 99%;
+  // max-width: 99%;
   }
 .highlight .hll {
     background-color: $code-background;

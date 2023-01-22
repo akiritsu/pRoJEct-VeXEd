@@ -1,6 +1,7 @@
 @mixin thin_scrollbar {
   &::-webkit-scrollbar {
-    width: 2.4px;
+    width: 4.5px;
+    height: 4.5px;
   }
   &::-webkit-scrollbar-thumb {
     background-color: $color-primary;
